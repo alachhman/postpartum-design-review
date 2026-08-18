@@ -1,0 +1,131 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>MVP Design Brief — context</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/site.css">
+<link rel="stylesheet" href="../css/docs.css">
+</head><body><nav class="nav"><div class="nav-in">
+  <a class="nav-mark" href="../index.html">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2 13a8 8 0 0 1 16 0" stroke="#C98A5B" stroke-width="1.6" stroke-linecap="round"/><path d="M2 16.5h16" stroke="#F0EBE1" stroke-width="1.6" stroke-linecap="round"/></svg>
+    <b>Design review</b></a>
+  <div class="nav-links">
+    <a href="../index.html">Overview</a>
+    <a href="../01-home.html">Home</a>
+    <a href="../02-checkin.html">Check-in</a>
+    <a href="../03-nudges.html">Nudges</a>
+    <a href="../04-onboarding.html">Onboarding</a>
+    <a href="../05-log.html">Log</a>
+    <a href="../06-trends.html">Trends</a>
+    <a href="../07-paywall.html">Paywall</a>
+    <a href="../08-adapted.html">Adapted mode</a>
+    <a href="../docs/index.html" aria-current="page">Context</a>
+  </div>
+</div></nav><div class="wrap"><section class="dochead"><span class="kind">Source document</span><div class="docmeta"><span>02_MVP_Design_Brief.md</span><span>1,122 words</span><span>15 sections</span></div></section><div class="doclayout"><aside class="doctoc"><span class="tl">On this page</span><ul><li><a class="l2" href="#mvp-design-brief-postpartum-weight-wellness-app">MVP Design Brief — Postpartum Weight &amp; Wellness App</a></li><li><a class="l3" href="#product-in-one-sentence">Product in one sentence</a></li><li><a class="l3" href="#platform-constraints">Platform &amp; constraints</a></li><li><a class="l3" href="#v1-surface-area">V1 surface area</a></li><li><a class="l3" href="#1-home-supply-first-layout-option-a">1. Home — &quot;supply-first&quot; layout (Option A)</a></li><li><a class="l3" href="#2-food-logging">2. Food logging</a></li><li><a class="l3" href="#3-supply-check-in-the-moat-feature">3. Supply check-in — the moat feature</a></li><li><a class="l3" href="#4-trends">4. Trends</a></li><li><a class="l3" href="#5-nudge-engine-rules-are-placeholders-shape-is-final">5. Nudge engine (rules are placeholders; shape is final)</a></li><li><a class="l3" href="#6-onboarding-7-screens-90-seconds">6. Onboarding — 7 screens, ≤90 seconds</a></li><li><a class="l3" href="#7-paywall-pricing">7. Paywall &amp; pricing</a></li><li><a class="l3" href="#8-nutrition-engine-placeholder-structure-only-clinical-sign-off-pending">8. Nutrition engine placeholder (structure only — clinical sign-off pending)</a></li><li><a class="l3" href="#screens-to-mock-design-phase">Screens to mock (design phase)</a></li><li><a class="l3" href="#explicitly-out-of-scope-for-v1">Explicitly out of scope for v1</a></li><li><a class="l3" href="#open-items-not-blocking-design">Open items (not blocking design)</a></li></ul><span class="tl" style="margin-top:22px">All documents</span><ul><li><a href="00_README.html">Package README</a></li><li><a href="02_MVP_Design_Brief.html">MVP Design Brief</a></li><li><a href="04_Style_Guide.html">Style Guide</a></li><li><a href="05_Design_Research.html">Design Research</a></li><li><a href="01_Conversation_Log.html">Conversation Log</a></li><li><a href="03_Market_Research.html">Market Research</a></li></ul></aside><article class="prose"><h1 id="mvp-design-brief-postpartum-weight-wellness-app">MVP Design Brief — Postpartum Weight &amp; Wellness App</h1>
+<p><em>Compiled from founder scoping sessions, August 17, 2026. Companion to <code>Postpartum_App_Market_Research.docx</code>.</em></p>
+<h2 id="product-in-one-sentence">Product in one sentence</h2>
+<p>The breastfeeding-safe nutrition and wellness coach: helps nursing mothers lose weight without risking milk supply, built on calorie floors, a daily supply check-in, and nudges that know when to tell her to eat more.</p>
+<h2 id="platform-constraints">Platform &amp; constraints</h2>
+<ul>
+<li>iOS first (iOS 17+), Android fast-follow. Dark mode required (3 a.m. use case).</li>
+<li>Every core action must be one-handed and completable in under 10 seconds.</li>
+<li>Nutrition engine ships with placeholder rules (structure below); coefficients finalized with RD/IBCLC advisors before public launch. UI must not need rework when real math lands.</li>
+<li>Privacy: no third-party advertising data sharing. Ever. It's a differentiator.</li>
+<li>Tone: warm, plain, zero diet-culture. No before/after imagery anywhere. "Feed your baby, fuel your recovery" — never "get your body back."</li>
+</ul>
+<h2 id="v1-surface-area">V1 surface area</h2>
+<p>Four core screens (Home, Log, Check-in, Trends) + onboarding + paywall + two full-screen nudge moments.</p>
+<hr />
+<h2 id="1-home-supply-first-layout-option-a">1. Home — "supply-first" layout (Option A)</h2>
+<p>Decision: supply status leads, calories second. This is the positioning rendered in UI.</p>
+<p>Stack, top to bottom:
+1. Greeting (first name, time-aware).
+2. <strong>Supply status banner</strong> — green/steady state: "Supply steady — 5 days," subtitle from yesterday's check-in. Amber when dipping, with the nudge entry point.
+3. <strong>Calories-remaining ring</strong> with the floor drawn as a visible hard line on the ring. Beside it: "Floor: 1,800 kcal — you're safely above it."
+4. Quick actions: Log food · Daily check-in. (Water chip optional, small.)</p>
+<p>Build note: home is a reorderable component stack behind a config flag. Calories-first (Option B) exists as a layout variant for A/B testing once DAU supports it. Not deliberated further pre-launch.</p>
+<h2 id="2-food-logging">2. Food logging</h2>
+<ul>
+<li>V1 inputs: USDA database search, barcode scan, recents/favorites. Meal-grouped (breakfast/lunch/dinner/snacks).</li>
+<li>"Set amount, we calculate the rest" portion flow; live nutrition preview.</li>
+<li>Photo logging and voice entry: fast-follow, explicitly not v1.</li>
+<li>Benchmark: repeat log of a known food in under 10 seconds, one-handed.</li>
+</ul>
+<h2 id="3-supply-check-in-the-moat-feature">3. Supply check-in — the moat feature</h2>
+<p>Decision: <strong>active only</strong> in v1; passive inference from feed logs comes later at scale.</p>
+<ul>
+<li>Daily, ~10 seconds, three taps:
+  1. Feeds felt normal today? (yes / somewhat / no)
+  2. Pump output vs. usual? (more / same / less / didn't pump)
+  3. Baby seemed satisfied? (yes / unsure / no)</li>
+<li>Adaptive: question 2 hidden for non-pumpers (from onboarding nursing status).</li>
+<li>Streak display, gentle. Feeds the nudge engine and the Trends supply line.</li>
+<li><strong>No nursing/pumping timers in v1.</strong> Tracker import/sync (Huckleberry et al.) targeted for v1.5.</li>
+<li>Roadmap note (v2): native free feeding tracker as acquisition funnel — must be genuinely feature-deep and standalone-excellent, not a stub. Nothing in v1 forecloses this.</li>
+</ul>
+<h2 id="4-trends">4. Trends</h2>
+<ul>
+<li>Weight: <strong>weekly weigh-in prompt</strong>; display is the 7-day smoothed trend line, not raw daily noise. Smoothing framed as a feature ("scale weight lies while nursing").</li>
+<li>Floor adherence: days above floor this week.</li>
+<li>Supply line: check-in history as a simple steady/dip band.</li>
+<li>Measurements: optional entry, deferred emphasis. Energy self-rating optional.</li>
+</ul>
+<h2 id="5-nudge-engine-rules-are-placeholders-shape-is-final">5. Nudge engine (rules are placeholders; shape is final)</h2>
+<p>Four families:
+1. <strong>Supply-protect</strong> (hero moment): check-in dips 2 consecutive days AND intake under target ≥2 of last 3 days → full-screen: "Let's ease up — +300 kcal for the next 2 days." <strong>One-tap accept</strong> ("Raise my target →"). Never silent auto-adjust; numbers never change without her tap.
+2. <strong>Floor breach</strong>: projected/actual day below hard floor → immediate full-screen interrupt. Repeated breaches → soften targets + IBCLC referral prompt.
+3. <strong>Positive reinforcement</strong>: streaks, protein trend, hydration — quiet in-app cards only.
+4. <strong>Escalation</strong>: supply dip persists 4+ days regardless of intake → app steps back, points to humans (IBCLC/provider referral). The app knows when it's out of its depth.</p>
+<p>Loudness rule: families 1–2 are full-screen moments; 3–4 in-app cards (4 escalates to full-screen at threshold).
+Notification budget: <strong>max one push/day</strong>, priority: floor breach &gt; supply dip &gt; hydration &gt; streaks. Everything else in-app only.</p>
+<h2 id="6-onboarding-7-screens-90-seconds">6. Onboarding — 7 screens, ≤90 seconds</h2>
+<p>Order: baby's birth date → nursing status (exclusive/combo/pumping/weaning) → height, weight, pre-pregnancy weight → activity level → "What matters most right now?" (energy / strength / weight loss / all of it) → <strong>live target preview with the math shown</strong> → account creation.</p>
+<p>Locked decisions:
+- <strong>Value before the account wall.</strong> She sees her full personalized plan — targets, floor, and why — before signup.
+- <strong>Six-week hard gate.</strong> Baby under 6 weeks → maintenance-only mode until she confirms she's past her postpartum checkup. No override. Loudest "not like other diet apps" signal we have.
+- <strong>Disordered-eating screen</strong>: one gentle self-report question, not a clinical screener. If yes → adapted mode: no deficit default, no streak pressure, softer copy throughout.
+- Deferred to post-signup settings: delivery type, measurements, water goal.
+- "What matters most" answer personalizes tone and home emphasis (body-neutral path is first-class, not a toggle).</p>
+<h2 id="7-paywall-pricing">7. Paywall &amp; pricing</h2>
+<ul>
+<li><strong>Safety is never paywalled.</strong> Free forever: basic logging, supply check-in, floor-breach warnings.</li>
+<li>Paid: personalized targets, nudge engine with one-tap adjustments, trends, future fitness programs.</li>
+<li>Trial: 7 days, card required, presented at the plan-reveal moment — "Start your free trial to activate your plan."</li>
+<li>Pricing: annual-first <strong>$79.99/yr</strong>, monthly <strong>$12.99/mo</strong> beneath it. <strong>No weekly plan</strong> (predatory pattern, off-brand).</li>
+<li>Rationale: free safety layer keeps IBCLC referrals clean, feeds the v2 tracker funnel, and avoids the "charges moms for supply warnings" headline.</li>
+</ul>
+<h2 id="8-nutrition-engine-placeholder-structure-only-clinical-sign-off-pending">8. Nutrition engine placeholder (structure only — clinical sign-off pending)</h2>
+<ul>
+<li>Mifflin-St Jeor BMR + activity factor + lactation adjustment (+300–500 kcal by nursing status).</li>
+<li>Hard calorie floor by status (~1,800 kcal exclusive nursing; tiered lower for combo/weaning — final numbers from advisors).</li>
+<li>Deficit cap ~0.5–1 lb/week while nursing; zero deficit under six weeks postpartum.</li>
+<li>Macro targets weighted to protein, set from body weight.</li>
+<li>Hydration floor tuned for lactation (~3.0–3.8 L; advisor-confirmed).</li>
+<li>All coefficients live in remote config: clinical revisions must not require app releases.</li>
+</ul>
+<h2 id="screens-to-mock-design-phase">Screens to mock (design phase)</h2>
+<ol>
+<li>Onboarding ×7 (including target-preview "math shown" screen and six-week-gate variant)</li>
+<li>Home (Option A; steady state + amber supply-dip state)</li>
+<li>Log flow: search → portion → confirm; barcode entry</li>
+<li>Supply check-in: 3-tap flow + completion state</li>
+<li>Trends</li>
+<li>Paywall (plan-activation moment)</li>
+<li>Nudge moments: supply-protect full-screen (with one-tap accept), floor-breach interrupt</li>
+<li>Adapted-mode variant of home (no deficit/streaks) — one example screen</li>
+</ol>
+<h2 id="explicitly-out-of-scope-for-v1">Explicitly out of scope for v1</h2>
+<p>Nursing/pumping timers · photo &amp; voice logging · fitness content · community · Android · passive supply inference · PPD screening (resource links only) · GLP-1 anything · web app.</p>
+<h2 id="open-items-not-blocking-design">Open items (not blocking design)</h2>
+<ul>
+<li>App name &amp; brand direction (3 directions to test in discovery interviews)</li>
+<li>Clinical advisor recruitment (RD + IBCLC) → finalizes engine coefficients</li>
+<li>Sister's HR/outside-activities confirmation + disclosed-partnership agreement (FTC)</li>
+<li>Willingness-to-pay validation: 20 interviews, kill criterion at &lt;1/3 willing to pay ~$10/mo</li>
+</ul></article></div><div class="pager"><a href="00_README.html">← Package README</a><a href="04_Style_Guide.html">Style Guide →</a></div></div><footer><div class="wrap f-in">
+  <span>Source document · rendered from the repository markdown</span>
+  <span>Working material · share the link deliberately</span>
+</div></footer></body></html>

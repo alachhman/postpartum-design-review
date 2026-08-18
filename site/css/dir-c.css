@@ -1,0 +1,158 @@
+/* ============================================================
+   DIRECTION C — "PROTECTED"
+   Thesis: the competitor is abandonment (§0A.2), so the app asks
+   for LESS over time. The hero is not today's calorie number —
+   it is "days protected," Dexcom Time-in-Range ported (§8.2-D):
+   a win condition that does not require the scale to move, which
+   is the only honest design for the cohort that GAINS while
+   nursing (§0A.5). Numbers are off by default (§8.2-J). Input is
+   low-precision by default (§0A.2). Palette runs on a clock
+   (§4.4 / §8.2-G) — day, dusk, and a 2-5am mode with a 20pt
+   type floor (§1.4, §5).
+   ============================================================ */
+
+.dir-c{
+  --r-card:14px;
+  --r-btn:999px;
+  --f-ui:"Hanken Grotesk",system-ui,sans-serif;
+  --f-ed:"Petrona",Georgia,serif;
+  --f-mono:"IBM Plex Mono",monospace;
+}
+
+/* ---- t-day ---- */
+.dir-c .screen,.dir-c .screen.t-day{
+  --bg:#F0EDE6; --surface:#FBF9F4; --surface-2:#E7E2D8;
+  --ink:#22201C; --ink-soft:#5E584F; --ink-faint:#8C857A;
+  --hairline:#DDD7CA; --hairline-2:#CAC2B2;
+  --accent:#7A5A16; --on-accent:#FBF9F4; --accent-tint:#EDE4CE;
+  --held:#4A6B58; --held-tint:#E1E9E2;   /* protected day */
+  --thin:#8C857A;                         /* slightly under */
+  --miss:#9A6A4E;                         /* well under */
+  --min-t:13px;
+}
+/* ---- t-dusk ---- */
+.dir-c .screen.t-dusk{
+  --bg:#33302B; --surface:#3C3833; --surface-2:#2B2823;
+  --ink:#EDEAE3; --ink-soft:#B5AEA4; --ink-faint:#928B80;
+  --hairline:#474139; --hairline-2:#5A5348;
+  --accent:#D8B678; --on-accent:#26231F; --accent-tint:#413A2C;
+  --held:#8FB49E; --held-tint:#2F3831;
+  --thin:#948C81; --miss:#C08D6C;
+  --min-t:14px;
+}
+/* ---- t-night: 2-5am. Lowest total emitted light (§1.4).
+       Type floor rises to 20px; nothing dim-grey-on-black. ---- */
+.dir-c .screen.t-night{
+  --bg:#1A1815; --surface:#232019; --surface-2:#15130F;
+  --ink:#EDEAE3; --ink-soft:#A8A29A; --ink-faint:#8A8378;
+  --hairline:#2E2A24; --hairline-2:#3C372E;
+  --accent:#C9A465; --on-accent:#1A1815; --accent-tint:#332C1E;
+  --held:#7FA893; --held-tint:#232B26;
+  --thin:#8A8378; --miss:#B98461;
+  --min-t:20px;
+}
+.dir-c .screen{background:var(--bg);color:var(--ink)}
+.dir-c .screen.t-night .p,
+.dir-c .screen.t-night .greet-sub,
+.dir-c .screen.t-night .cellkey{font-size:var(--min-t)}
+
+/* ---------- type ---------- */
+.dir-c .greet{font-family:var(--f-ed);font-size:27px;font-weight:400;line-height:1.16;letter-spacing:-.008em}
+.dir-c .greet-sub{font-size:14.5px;color:var(--ink-soft);margin-top:4px;line-height:1.45}
+.dir-c .sec{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-faint)}
+.dir-c .lbl{font-family:var(--f-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint)}
+.dir-c .ed{font-family:var(--f-ed);font-weight:400}
+.dir-c .p{font-size:15px;line-height:1.58;color:var(--ink-soft)}
+.dir-c .p strong{color:var(--ink);font-weight:600}
+
+/* ---------- hero: the protected-days field ---------- */
+.dir-c .field{display:grid;grid-template-columns:repeat(10,1fr);gap:6px}
+.dir-c .field i{
+  display:block;aspect-ratio:1;border-radius:4px;background:var(--held);
+}
+.dir-c .field i.thin{background:transparent;border:1.5px solid var(--thin)}
+.dir-c .field i.miss{
+  background:transparent;border:1.5px solid var(--miss);
+  background-image:repeating-linear-gradient(-45deg,currentColor 0 1.5px,transparent 1.5px 4px);
+  color:var(--miss);
+}
+.dir-c .field i.pause{background:var(--surface-2);border:1.5px dashed var(--hairline-2)}
+.dir-c .field i.void{background:transparent;border:1.5px dotted var(--hairline-2)}
+.dir-c .field i.today{background:transparent;border:2px solid var(--accent);
+  background-image:radial-gradient(circle at 50% 50%, var(--accent) 0 22%, transparent 22%)}
+.dir-c .fieldkey{display:flex;flex-wrap:wrap;gap:8px 14px;margin-top:14px}
+.dir-c .cellkey{display:flex;align-items:center;gap:6px;font-size:11.5px;color:var(--ink-soft)}
+.dir-c .cellkey b{width:10px;height:10px;border-radius:3px;display:block;flex:0 0 auto}
+
+.dir-c .hero-n{
+  font-family:var(--f-ed);font-size:60px;font-weight:400;line-height:.95;letter-spacing:-.02em;
+  font-variant-numeric:tabular-nums;display:flex;align-items:baseline;gap:10px;
+}
+.dir-c .hero-n u{font-family:var(--f-ui);font-size:17px;font-weight:500;text-decoration:none;color:var(--ink-soft);letter-spacing:0}
+.dir-c .hero-say{font-family:var(--f-ed);font-size:19px;line-height:1.32;margin-top:12px}
+
+/* ---------- banner ---------- */
+.dir-c .banner{display:flex;gap:12px;align-items:flex-start;padding:14px 15px;border-radius:var(--r-card);
+  background:var(--held-tint);border:1px solid transparent}
+.dir-c .banner .ic{flex:0 0 auto;color:var(--held);margin-top:1px}
+.dir-c .banner .h{font-family:var(--f-ed);font-size:17px;line-height:1.24}
+.dir-c .banner .s{font-size:13px;color:var(--ink-soft);margin-top:3px;line-height:1.42}
+.dir-c .banner.dip{background:var(--accent-tint);border-style:dashed;border-color:var(--accent)}
+.dir-c .banner.dip .ic{color:var(--accent)}
+.dir-c .banner.unknown{background:transparent;border:1px dotted var(--hairline-2)}
+.dir-c .banner.unknown .ic{color:var(--ink-faint)}
+
+/* ---------- cards / rows ---------- */
+.dir-c .card{background:var(--surface);border:1px solid var(--hairline);border-radius:var(--r-card);padding:16px}
+.dir-c .card.quiet{background:transparent}
+.dir-c .divider{height:1px;background:var(--hairline)}
+.dir-c .listrow{display:flex;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid var(--hairline)}
+.dir-c .listrow:last-child{border-bottom:0}
+.dir-c .listrow .nm{font-size:15.5px;font-weight:500;line-height:1.25}
+.dir-c .listrow .mt{font-size:12.5px;color:var(--ink-soft);margin-top:2px}
+
+/* ---------- buttons: pill, centred (§6.1 — 20mm ≈ 56pt) ---------- */
+.dir-c .btn{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  min-height:56px;padding:0 22px;border-radius:var(--r-btn);border:1.5px solid transparent;
+  background:var(--accent);color:var(--on-accent);font-family:var(--f-ui);
+  font-size:16.5px;font-weight:600;cursor:pointer;
+}
+.dir-c .btn.quiet{background:transparent;color:var(--ink);border-color:var(--hairline-2);font-weight:500}
+.dir-c .btn.ghost{background:transparent;border-color:transparent;color:var(--ink-soft);font-weight:500;min-height:50px}
+.dir-c .btn.held{background:var(--held);color:var(--on-accent)}
+.dir-c .btn.big{min-height:62px;font-size:18px}
+.dir-c .chip{
+  display:inline-flex;align-items:center;gap:6px;height:44px;padding:0 18px;border-radius:999px;
+  border:1px solid var(--hairline-2);background:transparent;font-size:14px;font-weight:500;color:var(--ink);
+}
+.dir-c .chip.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+
+/* low-precision answer stack — the alternative to gram-level logging (§0A.2) */
+.dir-c .coarse{display:flex;flex-direction:column;gap:10px}
+.dir-c .coarse button{
+  display:flex;align-items:center;gap:13px;min-height:64px;padding:0 18px;width:100%;
+  border-radius:var(--r-card);border:1.5px solid var(--hairline-2);background:var(--surface);
+  color:var(--ink);font-family:var(--f-ui);font-size:17px;font-weight:500;text-align:left;cursor:pointer;
+}
+.dir-c .coarse button .mk{width:26px;height:26px;border-radius:999px;border:1.5px solid var(--hairline-2);flex:0 0 auto}
+.dir-c .coarse button.on{border-color:var(--ink);background:var(--surface)}
+.dir-c .coarse button.on .mk{background:var(--ink);border-color:var(--ink);
+  box-shadow:inset 0 0 0 4px var(--surface)}
+
+.dir-c .dots{display:flex;gap:5px}
+.dir-c .dots i{width:6px;height:6px;border-radius:9px;background:var(--hairline-2);display:block}
+.dir-c .dots i.on{background:var(--ink)}
+
+.dir-c .sheet{flex:1;display:flex;flex-direction:column;padding:0 24px}
+.dir-c .sheet .kicker{font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint)}
+.dir-c .sheet h1{font-family:var(--f-ed);font-size:36px;font-weight:400;line-height:1.12;letter-spacing:-.012em;margin:14px 0 0}
+.dir-c .sheet .why{font-size:16px;line-height:1.56;color:var(--ink-soft);margin-top:14px}
+.dir-c .statn{font-family:var(--f-ed);font-size:28px;font-weight:400;font-variant-numeric:tabular-nums;line-height:1}
+.dir-c .statl{font-family:var(--f-mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);margin-top:6px}
+
+/* breath ring used on the interrupt (§6.5 — forced pause) */
+.dir-c .breath{width:96px;height:96px;border-radius:999px;border:1.5px solid var(--accent);
+  margin:0 auto;position:relative;opacity:.9}
+.dir-c .breath::after{content:"";position:absolute;inset:14px;border-radius:999px;border:1.5px solid var(--accent);opacity:.5}
+.dir-c .breath::before{content:"";position:absolute;inset:28px;border-radius:999px;background:var(--accent);opacity:.22}

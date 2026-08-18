@@ -1,0 +1,153 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Style Guide — context</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/site.css">
+<link rel="stylesheet" href="../css/docs.css">
+</head><body><nav class="nav"><div class="nav-in">
+  <a class="nav-mark" href="../index.html">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2 13a8 8 0 0 1 16 0" stroke="#C98A5B" stroke-width="1.6" stroke-linecap="round"/><path d="M2 16.5h16" stroke="#F0EBE1" stroke-width="1.6" stroke-linecap="round"/></svg>
+    <b>Design review</b></a>
+  <div class="nav-links">
+    <a href="../index.html">Overview</a>
+    <a href="../01-home.html">Home</a>
+    <a href="../02-checkin.html">Check-in</a>
+    <a href="../03-nudges.html">Nudges</a>
+    <a href="../04-onboarding.html">Onboarding</a>
+    <a href="../05-log.html">Log</a>
+    <a href="../06-trends.html">Trends</a>
+    <a href="../07-paywall.html">Paywall</a>
+    <a href="../08-adapted.html">Adapted mode</a>
+    <a href="../docs/index.html" aria-current="page">Context</a>
+  </div>
+</div></nav><div class="wrap"><section class="dochead"><span class="kind">Source document</span><div class="docmeta"><span>04_Style_Guide.md</span><span>772 words</span><span>10 sections</span></div></section><div class="doclayout"><aside class="doctoc"><span class="tl">On this page</span><ul><li><a class="l2" href="#style-design-direction">Style &amp; Design Direction</a></li><li><a class="l3" href="#personality-in-five-words">Personality in five words</a></li><li><a class="l3" href="#color">Color</a></li><li><a class="l3" href="#typography">Typography</a></li><li><a class="l3" href="#shape-layout">Shape &amp; layout</a></li><li><a class="l3" href="#signature-components">Signature components</a></li><li><a class="l3" href="#iconography-imagery">Iconography &amp; imagery</a></li><li><a class="l3" href="#motion-feedback">Motion &amp; feedback</a></li><li><a class="l3" href="#voice-copy-rules-firm">Voice &amp; copy rules (firm)</a></li><li><a class="l3" href="#adapted-mode-from-the-gentle-onboarding-question">Adapted mode (from the gentle onboarding question)</a></li></ul><span class="tl" style="margin-top:22px">All documents</span><ul><li><a href="00_README.html">Package README</a></li><li><a href="02_MVP_Design_Brief.html">MVP Design Brief</a></li><li><a href="04_Style_Guide.html">Style Guide</a></li><li><a href="05_Design_Research.html">Design Research</a></li><li><a href="01_Conversation_Log.html">Conversation Log</a></li><li><a href="03_Market_Research.html">Market Research</a></li></ul></aside><article class="prose"><h1 id="style-design-direction">Style &amp; Design Direction</h1>
+<p><em>Visual language for the breastfeeding-safe nutrition coach. These are strong suggestions, not locked decisions — Claude Design should treat palette/type as a starting system and propose refinements, but the tone rules and "never" list are firm.</em></p>
+<h2 id="personality-in-five-words">Personality in five words</h2>
+<p>Warm. Calm. Trustworthy. Unhurried. Grown-up.</p>
+<p>The emotional target: a knowledgeable friend who happens to be a lactation consultant — not a coach yelling, not a hospital, not a pastel baby brand. She is exhausted and skeptical; the design's job is to lower her shoulders.</p>
+<h2 id="color">Color</h2>
+<p>Primary system (light mode):</p>
+<table>
+<thead>
+<tr>
+<th>Token</th>
+<th>Hex</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sage 600 (primary)</td>
+<td>#5C8D76</td>
+<td>Primary actions, active ring, steady-state accents</td>
+</tr>
+<tr>
+<td>Sage 800</td>
+<td>#3D6353</td>
+<td>Text on sage tints, pressed states</td>
+</tr>
+<tr>
+<td>Sage 100</td>
+<td>#E8F1EC</td>
+<td>Supply-steady banner bg, positive tints</td>
+</tr>
+<tr>
+<td>Cream (canvas)</td>
+<td>#FAF7F2</td>
+<td>App background — never stark white pages</td>
+</tr>
+<tr>
+<td>Surface</td>
+<td>#FFFFFF</td>
+<td>Cards on cream</td>
+</tr>
+<tr>
+<td>Ink</td>
+<td>#2B2B28</td>
+<td>Primary text — warm near-black, never pure #000</td>
+</tr>
+<tr>
+<td>Ink-soft</td>
+<td>#6B6A64</td>
+<td>Secondary text</td>
+</tr>
+<tr>
+<td>Hairline</td>
+<td>#E7E2D9</td>
+<td>Borders, dividers</td>
+</tr>
+<tr>
+<td>Amber 600</td>
+<td>#C98A2D</td>
+<td>Supply-dip state, gentle caution</td>
+</tr>
+<tr>
+<td>Amber 100</td>
+<td>#F8EFDD</td>
+<td>Dip banner bg</td>
+</tr>
+<tr>
+<td>Coral 600</td>
+<td>#C4573B</td>
+<td>Floor-breach only — reserved, so it always means "stop"</td>
+</tr>
+<tr>
+<td>Coral 100</td>
+<td>#F9E7E1</td>
+<td>Breach surface bg</td>
+</tr>
+</tbody>
+</table>
+<p>Rules: sage carries the brand; amber and coral are <em>states</em>, never decoration. No red anywhere except coral's role. No pinks-and-pastels baby palette. Dark mode is required (3 a.m. use): warm dark charcoal (#211F1C canvas, #2C2A26 surfaces), desaturated sage (#7FA893), text #EDEae3 — never pure black/white; dim, low-glare, nursery-safe.</p>
+<h2 id="typography">Typography</h2>
+<ul>
+<li>iOS: SF Pro Rounded (display + text). Cross-platform/mock fallback: Nunito.</li>
+<li>Scale: 28/semibold display (big numbers like calories remaining), 22/semibold titles, 17/regular body, 15 secondary, 13 captions. Minimum 13pt anywhere.</li>
+<li>Numbers she cares about are big and calm — not dashboard-dense. One hero number per screen.</li>
+<li>Sentence case everywhere. No ALL CAPS, no exclamation points in system copy.</li>
+</ul>
+<h2 id="shape-layout">Shape &amp; layout</h2>
+<ul>
+<li>Radii: cards 20pt, buttons 14pt, chips/pills fully rounded. Soft, but not bubble-cute.</li>
+<li>Spacing on a 4pt grid; generous — whitespace is the calm.</li>
+<li>One-handed rule: primary actions live in the bottom 40% of the screen; tap targets ≥44pt.</li>
+<li>Shadows: barely-there (y2 blur8 @6%) or none — prefer hairline borders.</li>
+</ul>
+<h2 id="signature-components">Signature components</h2>
+<ul>
+<li><strong>Supply status banner</strong> (home, top): tinted card with shield/leaf icon, headline ("Supply steady — 5 days"), one-line subtitle from yesterday's check-in. Green sage = steady, amber = dipping (with nudge entry point).</li>
+<li><strong>Calorie ring with floor line</strong>: the differentiating visual. Progress ring for intake vs target, with the floor rendered as a distinct notch/line the fill visibly sits above. Label pattern: "Floor: 1,800 — you're safely above it." The floor must read at a glance; it is the brand promise drawn as geometry.</li>
+<li><strong>3-tap check-in cards</strong>: three sequential large-tap-target cards (yes / somewhat / no pattern), each answerable with a thumb, progress dots, done in ~10 seconds.</li>
+<li><strong>Full-screen nudge sheet</strong> (supply-protect): calm, not alarming — sage surface, plain-language headline ("Let's ease up for two days"), the reason in one sentence, one-tap primary ("Raise my target to 2,300 →") and a quiet "Not now." Floor-breach variant uses coral, firmer copy, same structure.</li>
+<li><strong>Trend chart</strong>: single smoothed line with a soft confidence band; weekly dots; no gridline clutter; annotations in plain words ("steady," "down 0.8 lb/wk").</li>
+<li><strong>Paywall</strong>: plan-activation framing ("Your plan is ready"), annual card first with 2px sage border + "Best value" chip, monthly beneath, trial terms in honest plain type. No countdown timers, no fake discounts.</li>
+</ul>
+<h2 id="iconography-imagery">Iconography &amp; imagery</h2>
+<ul>
+<li>Icons: soft rounded-outline set (SF Symbols rounded weight), never sharp/techy.</li>
+<li>Illustration (if any): abstract organic shapes, botanical hints — no storks, no cartoon babies, no scales, no tape measures.</li>
+<li>Photography: real postpartum bodies when used in marketing; NEVER before/after pairs, in-app or in ads.</li>
+</ul>
+<h2 id="motion-feedback">Motion &amp; feedback</h2>
+<ul>
+<li>200–300ms ease-out transitions; nothing bouncy or game-like.</li>
+<li>Haptics: light on check-in completion and one-tap accepts.</li>
+<li>Celebration is restrained and aimed at <em>behaviors</em> (check-in streaks, floor adherence) — never at weight lost. No confetti on the scale, ever.</li>
+</ul>
+<h2 id="voice-copy-rules-firm">Voice &amp; copy rules (firm)</h2>
+<ul>
+<li>Warm, plain, specific. "Let's ease up for two days" — not "Alert: supply risk detected."</li>
+<li>The app admits limits: escalation moments hand her to humans ("This is worth a chat with your IBCLC").</li>
+<li>Banned lexicon: "bounce back," "get your body back," "guilt," "cheat," "burn it off," "earn your food," "summer body," "shred," "detox."</li>
+<li>Preferred frames: fuel, recovery, strength, steady, protected, "the weight that's ready to go."</li>
+<li>Numbers with context, never naked: "1,460 left — comfortably above your floor."</li>
+</ul>
+<h2 id="adapted-mode-from-the-gentle-onboarding-question">Adapted mode (from the gentle onboarding question)</h2>
+<p>When enabled: no deficit by default, no streaks, hero metric switches from calories-remaining to energy/protein, copy drops all loss language. Design every screen knowing this variant exists — it should feel like a sibling, not a downgrade.</p></article></div><div class="pager"><a href="02_MVP_Design_Brief.html">← MVP Design Brief</a><a href="05_Design_Research.html">Design Research →</a></div></div><footer><div class="wrap f-in">
+  <span>Source document · rendered from the repository markdown</span>
+  <span>Working material · share the link deliberately</span>
+</div></footer></body></html>

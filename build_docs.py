@@ -48,7 +48,7 @@ HEAD = """<!doctype html><html lang="en"><head>
 
 FOOT = """<footer><div class="wrap f-in">
   <span>Source document · rendered from the repository markdown</span>
-  <span>Private working material — not for distribution</span>
+  <span>Working material · share the link deliberately</span>
 </div></footer></body></html>"""
 
 def slugify(t):
@@ -129,9 +129,10 @@ idx = (HEAD.format(title="Context documents", root="../")
        <div class="metabar"><span>6 documents</span><span>%s words total</span>
        <span>Authority order: brief &gt; style guide &gt; log &gt; market research</span></div>
        </section>
-       <div class="docnote" style="margin-top:10px"><b>Private working material.</b> These pages carry
-       commercial strategy and personal details. The site is marked no-index, but a Pages URL is
-       reachable by anyone who has the link — treat it as shareable-with-intent, not secret.</div>
+       <div class="docnote" style="margin-top:10px"><b>Heads up on what is in here.</b> These pages carry
+       commercial strategy, pricing and unit economics, and the founding-creator arrangement. The site is
+       excluded from search engines, but the URL works for anyone who has it and requires no sign-in —
+       so share it deliberately.</div>
        <div class="indexgrid" style="margin-bottom:60px">%s</div></div>""" % (f"{total:,}", cards)
        + FOOT)
 # reuse the index card styles from the overview page

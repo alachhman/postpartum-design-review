@@ -1,0 +1,147 @@
+/* ============================================================
+   DIRECTION B — "THE BAND"
+   Thesis: keep the brief's ring, but fix its geometry. The floor
+   is a filled arc SECTOR the fill must cross out of, not a
+   hairline tick (§2.5), and the safe state is a BAND
+   (1,800–2,300) so there is no knife-edge to sit on.
+   Fill-to-safety, Apple Activity grammar — never drain-to-zero.
+   Palette stays sage-led but moves the ground off cream to pale
+   clay (§4.2 route 2) and repairs the failing tokens (§4.1).
+   State is encoded in hue AND geometry AND icon (§4.5).
+   Type: rounded UI for data, literary serif for knowledge (§5).
+   ============================================================ */
+
+.dir-b{
+  --bg:#F3EDE4;
+  --surface:#FFFFFF;
+  --surface-2:#FAF6EF;
+  --ink:#2B2B28;
+  --ink-soft:#6B6A64;
+  --ink-faint:#928E85;
+  --hairline:#E3DBCD;
+  --hairline-2:#D3C9B7;
+
+  --sage:#5C8D76;            /* ring stroke / large fills only — 3.27:1 */
+  --sage-7:#456B59;          /* text + button fill — 5.16:1, white on it 6.00:1 */
+  --sage-8:#3D6353;
+  --sage-1:#E8F1EC;
+  --amber:#8F6111;           /* repaired from #C98A2D (2.75:1 → 4.64:1) */
+  --amber-fill:#C98A2D;      /* large fills only, nothing sits on it */
+  --amber-1:#F8EFDD;
+  --coral:#A6432B;           /* repaired from #C4573B — 5.22:1 */
+  --coral-1:#F9E7E1;
+  --neutral:#928E85;
+
+  --accent:var(--sage-7);
+  --on-accent:#FFFFFF;
+
+  --r-card:20px;
+  --r-btn:14px;
+  --f-ui:"Nunito",system-ui,sans-serif;
+  --f-ed:"Newsreader",Georgia,serif;
+  --f-mono:"IBM Plex Mono",monospace;
+}
+
+/* warm dark, nursery-safe (§4.4) */
+.dir-b .screen.dark{
+  --bg:#211F1C; --surface:#2C2A26; --surface-2:#353229;
+  --ink:#EDEAE3; --ink-soft:#ADA69B; --ink-faint:#8C857A;
+  --hairline:#3A3630; --hairline-2:#4A453D;
+  --sage:#7FA893; --sage-7:#9DC0AC; --sage-8:#B6D2C2; --sage-1:#2A322D;
+  --amber:#DEB25F; --amber-fill:#C98A2D; --amber-1:#37301F;
+  --coral:#E39079; --coral-1:#3A2721;
+  --accent:#7FA893; --on-accent:#181614;
+}
+.dir-b .screen{background:var(--bg)}
+
+/* ---------- type ---------- */
+.dir-b .greet{font-family:var(--f-ui);font-size:25px;font-weight:700;line-height:1.18;letter-spacing:-.012em}
+.dir-b .greet-sub{font-size:14px;color:var(--ink-soft);margin-top:3px;font-weight:400}
+.dir-b .sec{font-size:13px;font-weight:700;color:var(--ink-soft);letter-spacing:.01em}
+.dir-b .lbl{font-family:var(--f-mono);font-size:10px;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-faint)}
+.dir-b .ed{font-family:var(--f-ed);font-weight:400}
+.dir-b .p{font-size:15px;line-height:1.55;color:var(--ink-soft)}
+.dir-b .p strong{color:var(--ink);font-weight:700}
+
+/* ---------- the ring ---------- */
+.dir-b .ringwrap{position:relative;width:212px;height:212px;margin:0 auto}
+.dir-b .ringwrap svg{display:block;width:100%;height:100%;overflow:visible}
+.dir-b .ring-c{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 30px}
+.dir-b .ring-n{font-size:46px;font-weight:800;line-height:.94;letter-spacing:-.035em;font-variant-numeric:tabular-nums}
+.dir-b .ring-u{font-size:12.5px;font-weight:700;color:var(--ink-soft);margin-top:5px;letter-spacing:.02em}
+.dir-b .ring-k{font-family:var(--f-mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:9px}
+.dir-b .bandlab{
+  display:flex;align-items:center;justify-content:center;gap:7px;margin-top:2px;
+  font-size:13px;color:var(--ink-soft);font-weight:600;
+}
+.dir-b .bandlab .sw{width:11px;height:11px;border-radius:3px;background:var(--sage-1);border:1.5px solid var(--sage)}
+
+/* ---------- banner: hue + geometry + icon, all three ---------- */
+.dir-b .banner{
+  display:flex;gap:12px;align-items:flex-start;padding:14px 15px;
+  border-radius:var(--r-card);background:var(--sage-1);border:1.5px solid transparent;
+}
+.dir-b .banner .ic{flex:0 0 auto;color:var(--sage-8);margin-top:1px}
+.dir-b .banner .h{font-size:16px;font-weight:700;line-height:1.25;color:var(--ink)}
+.dir-b .banner .s{font-size:13px;color:var(--ink-soft);margin-top:3px;line-height:1.4}
+.dir-b .banner .go{margin-left:auto;align-self:center;color:var(--ink-faint);flex:0 0 auto}
+/* dipping: inset dashed border + hatch — legible with Differentiate Without Color on */
+.dir-b .banner.dip{
+  background:var(--amber-1);border:1.5px dashed var(--amber);
+  background-image:repeating-linear-gradient(-45deg,rgba(143,97,17,.06) 0 4px,transparent 4px 10px);
+}
+.dir-b .banner.dip .ic{color:var(--amber)}
+.dir-b .banner.breach{background:var(--coral-1);border:1.5px solid var(--coral)}
+.dir-b .banner.breach .ic{color:var(--coral)}
+/* "not enough check-ins to say" — Natural Cycles' third state (§3.1, §8.2-I) */
+.dir-b .banner.unknown{background:transparent;border:1.5px dotted var(--hairline-2)}
+.dir-b .banner.unknown .ic{color:var(--ink-faint)}
+
+/* ---------- cards ---------- */
+.dir-b .card{background:var(--surface);border-radius:var(--r-card);padding:16px;border:1px solid var(--hairline)}
+.dir-b .card.tint{background:var(--sage-1);border-color:transparent}
+.dir-b .divider{height:1px;background:var(--hairline)}
+.dir-b .listrow{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--hairline)}
+.dir-b .listrow:last-child{border-bottom:0}
+.dir-b .listrow .nm{font-size:15.5px;font-weight:700;line-height:1.25}
+.dir-b .listrow .mt{font-size:12.5px;color:var(--ink-soft);margin-top:2px}
+.dir-b .listrow .val{font-size:15.5px;font-weight:800;font-variant-numeric:tabular-nums}
+
+/* ---------- buttons ---------- */
+.dir-b .btn{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  min-height:54px;padding:0 20px;border-radius:var(--r-btn);border:1.5px solid transparent;
+  background:var(--accent);color:var(--on-accent);font-family:var(--f-ui);
+  font-size:16.5px;font-weight:800;letter-spacing:.005em;cursor:pointer;
+}
+.dir-b .btn.quiet{background:var(--surface);color:var(--ink);border-color:var(--hairline-2);font-weight:700}
+.dir-b .btn.ghost{background:transparent;border-color:transparent;color:var(--ink-soft);font-weight:700;min-height:48px}
+.dir-b .btn.caution{background:var(--amber);color:#fff}
+.dir-b .btn.stop{background:var(--coral);color:#fff}
+.dir-b .btn.big{min-height:60px;font-size:17.5px}
+.dir-b .chip{
+  display:inline-flex;align-items:center;gap:6px;height:44px;padding:0 17px;border-radius:22px;
+  border:1.5px solid var(--hairline-2);background:var(--surface);font-size:13.5px;font-weight:700;color:var(--ink);
+}
+.dir-b .chip.on{background:var(--sage-1);border-color:var(--sage-7);color:var(--sage-8)}
+
+.dir-b .qa{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+.dir-b .qa-item{
+  display:flex;flex-direction:column;gap:10px;justify-content:flex-end;
+  min-height:88px;padding:14px;border-radius:var(--r-card);text-align:left;align-items:flex-start;background:var(--surface);border:1px solid var(--hairline);
+}
+.dir-b .qa-item .t{font-size:15.5px;font-weight:800;line-height:1.2}
+.dir-b .qa-item .d{font-size:12px;color:var(--ink-soft);font-weight:600}
+.dir-b .qa-item.accent{background:var(--sage-1);border-color:transparent}
+.dir-b .qa-item.accent .t{color:var(--sage-8)}
+
+.dir-b .dots{display:flex;gap:6px}
+.dir-b .dots i{width:7px;height:7px;border-radius:9px;background:var(--hairline-2);display:block}
+.dir-b .dots i.on{background:var(--sage-7);width:20px}
+
+.dir-b .sheet{flex:1;display:flex;flex-direction:column;padding:0 24px}
+.dir-b .sheet .kicker{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint)}
+.dir-b .sheet h1{font-family:var(--f-ed);font-size:33px;font-weight:400;line-height:1.14;letter-spacing:-.012em;margin:14px 0 0}
+.dir-b .sheet .why{font-size:16px;line-height:1.55;color:var(--ink-soft);margin-top:14px}
+.dir-b .statn{font-size:26px;font-weight:800;font-variant-numeric:tabular-nums;letter-spacing:-.02em;line-height:1}
+.dir-b .statl{font-size:11.5px;color:var(--ink-faint);font-weight:700;margin-top:5px}

@@ -1,0 +1,934 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Design Research — context</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/site.css">
+<link rel="stylesheet" href="../css/docs.css">
+</head><body><nav class="nav"><div class="nav-in">
+  <a class="nav-mark" href="../index.html">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2 13a8 8 0 0 1 16 0" stroke="#C98A5B" stroke-width="1.6" stroke-linecap="round"/><path d="M2 16.5h16" stroke="#F0EBE1" stroke-width="1.6" stroke-linecap="round"/></svg>
+    <b>Design review</b></a>
+  <div class="nav-links">
+    <a href="../index.html">Overview</a>
+    <a href="../01-home.html">Home</a>
+    <a href="../02-checkin.html">Check-in</a>
+    <a href="../03-nudges.html">Nudges</a>
+    <a href="../04-onboarding.html">Onboarding</a>
+    <a href="../05-log.html">Log</a>
+    <a href="../06-trends.html">Trends</a>
+    <a href="../07-paywall.html">Paywall</a>
+    <a href="../08-adapted.html">Adapted mode</a>
+    <a href="../docs/index.html" aria-current="page">Context</a>
+  </div>
+</div></nav><div class="wrap"><section class="dochead"><span class="kind">Source document</span><div class="docmeta"><span>05_Design_Research.md</span><span>12,646 words</span><span>56 sections</span></div></section><div class="doclayout"><aside class="doctoc"><span class="tl">On this page</span><ul><li><a class="l2" href="#design-research-postpartum-weight-wellness-app">Design Research — Postpartum Weight &amp; Wellness App</a></li><li><a class="l3" href="#0-the-ten-things-that-should-change">0. The ten things that should change</a></li><li><a class="l3" href="#0a-addendum-reddit-field-evidence">0A. Addendum — Reddit field evidence</a></li><li><a class="l4" href="#0a1-the-best-news-in-this-document-the-floor-is-already-installed">0A.1 The best news in this document: the floor is already installed</a></li><li><a class="l4" href="#0a2-your-competitor-is-abandonment">0A.2 Your competitor is abandonment</a></li><li><a class="l4" href="#0a3-the-myfitnesspal-hack-precisely-and-it-is-broken">0A.3 The MyFitnessPal hack, precisely — and it is broken</a></li><li><a class="l4" href="#0a4-what-she-believes-who-she-trusts-and-what-unlocks-payment">0A.4 What she believes, who she trusts, and what unlocks payment</a></li><li><a class="l4" href="#0a5-two-things-that-will-break-the-current-design">0A.5 Two things that will break the current design</a></li><li><a class="l4" href="#0a6-her-language-use-these-words">0A.6 Her language — use these words</a></li><li><a class="l4" href="#0a7-revisions-to-earlier-conclusions">0A.7 Revisions to earlier conclusions</a></li><li><a class="l3" href="#1-corrections-to-premises">1. Corrections to premises</a></li><li><a class="l4" href="#11-pump-output-is-not-a-valid-supply-metric-and-your-user-knows-that">1.1 Pump output is not a valid supply metric — and your user knows that</a></li><li><a class="l4" href="#12-supply-status-is-near-novel-but-the-window-is-closing">1.2 &quot;Supply status&quot; is near-novel — but the window is closing</a></li><li><a class="l4" href="#13-23-minutes-to-refocus-is-not-a-real-finding">1.3 &quot;23 minutes to refocus&quot; is not a real finding</a></li><li><a class="l4" href="#14-red-night-mode-has-no-evidence-behind-it">1.4 Red night mode has no evidence behind it</a></li><li><a class="l4" href="#15-smaller-corrections">1.5 Smaller corrections</a></li><li><a class="l3" href="#2-the-central-design-problem-the-floor">2. The central design problem: the floor</a></li><li><a class="l4" href="#21-you-are-inverting-a-metaphor-200-million-people-have-already-learned">2.1 You are inverting a metaphor 200 million people have already learned</a></li><li><a class="l4" href="#22-mfp-already-has-a-calorie-floor-it-is-the-exact-anti-pattern">2.2 MFP already has a calorie floor. It is the exact anti-pattern.</a></li><li><a class="l4" href="#23-the-unlabelled-arc-problem">2.3 The unlabelled-arc problem</a></li><li><a class="l4" href="#24-the-strongest-idea-in-this-document-subtract-the-floor-out">2.4 The strongest idea in this document: subtract the floor out</a></li><li><a class="l4" href="#25-ring-vs-bar-and-why-the-floor-should-be-a-band">2.5 Ring vs. bar — and why the floor should be a band</a></li><li><a class="l4" href="#26-three-specific-traps">2.6 Three specific traps</a></li><li><a class="l4" href="#27-the-four-precedents-worth-studying-directly">2.7 The four precedents worth studying directly</a></li><li><a class="l3" href="#3-supply-status-the-moat-and-how-to-render-it">3. Supply status — the moat, and how to render it</a></li><li><a class="l4" href="#31-what-to-put-in-the-banner">3.1 What to put in the banner</a></li><li><a class="l4" href="#32-phrase-the-check-in-questions-the-way-oura-phrases-contributors">3.2 Phrase the check-in questions the way Oura phrases contributors</a></li><li><a class="l4" href="#33-timers-are-a-trap-and-skipping-them-is-a-real-advantage">3.3 Timers are a trap — and skipping them is a real advantage</a></li><li><a class="l3" href="#4-colour">4. Colour</a></li><li><a class="l4" href="#41-contrast-audit-of-the-current-palette">4.1 Contrast audit of the current palette</a></li><li><a class="l4" href="#42-the-generic-wellness-risk-worth-taking-seriously">4.2 The generic-wellness risk — worth taking seriously</a></li><li><a class="l4" href="#43-the-not-pink-trap-has-two-siblings">4.3 The &quot;not pink&quot; trap has two siblings</a></li><li><a class="l4" href="#44-let-the-palette-follow-the-clock">4.4 Let the palette follow the clock</a></li><li><a class="l4" href="#45-the-colour-coding-failure-that-will-bite-you">4.5 The colour-coding failure that will bite you</a></li><li><a class="l3" href="#5-typography">5. Typography</a></li><li><a class="l3" href="#6-layout-and-interaction">6. Layout and interaction</a></li><li><a class="l4" href="#61-thumb-zones-use-the-2017-numbers-not-the-famous-ones">6.1 Thumb zones — use the 2017 numbers, not the famous ones</a></li><li><a class="l4" href="#62-logging-friction-the-specific-complaints">6.2 Logging friction — the specific complaints</a></li><li><a class="l4" href="#63-interruption-tolerance">6.3 Interruption tolerance</a></li><li><a class="l4" href="#64-streaks-make-them-forgiving-by-mechanism-not-by-tone">6.4 Streaks — make them forgiving by mechanism, not by tone</a></li><li><a class="l4" href="#65-nudges-the-ethical-gate-and-the-shape">6.5 Nudges — the ethical gate and the shape</a></li><li><a class="l3" href="#7-copy-and-tone">7. Copy and tone</a></li><li><a class="l3" href="#8-novel-concepts">8. Novel concepts</a></li><li><a class="l4" href="#81-the-safe-core">8.1 The safe core</a></li><li><a class="l4" href="#82-the-swings">8.2 The swings</a></li><li><a class="l3" href="#9-the-do-not-list">9. The do-not list</a></li><li><a class="l3" href="#10-claude-code-design-toolchain">10. Claude Code design toolchain</a></li><li><a class="l4" href="#101-install-these">10.1 Install these</a></li><li><a class="l4" href="#102-the-figma-swiftui-skill-is-the-find">10.2 The figma-swiftui skill is the find</a></li><li><a class="l4" href="#103-the-code-to-design-direction-is-the-underrated-half">10.3 The code-to-design direction is the underrated half</a></li><li><a class="l4" href="#104-the-loop-that-actually-produces-good-ui">10.4 The loop that actually produces good UI</a></li><li><a class="l4" href="#105-encode-the-design-system-so-it-cant-drift">10.5 Encode the design system so it can&#x27;t drift</a></li><li><a class="l4" href="#106-getting-non-generic-visual-output-from-claude">10.6 Getting non-generic visual output from Claude</a></li><li><a class="l4" href="#107-skip-these">10.7 Skip these</a></li><li><a class="l3" href="#11-what-to-validate-next">11. What to validate next</a></li><li><a class="l3" href="#sources">Sources</a></li></ul><span class="tl" style="margin-top:22px">All documents</span><ul><li><a href="00_README.html">Package README</a></li><li><a href="02_MVP_Design_Brief.html">MVP Design Brief</a></li><li><a href="04_Style_Guide.html">Style Guide</a></li><li><a href="05_Design_Research.html">Design Research</a></li><li><a href="01_Conversation_Log.html">Conversation Log</a></li><li><a href="03_Market_Research.html">Market Research</a></li></ul></aside><article class="prose"><h1 id="design-research-postpartum-weight-wellness-app">Design Research — Postpartum Weight &amp; Wellness App</h1>
+<p><em>Compiled August 17, 2026. Companion to <code>02_MVP_Design_Brief.md</code> (source of truth) and <code>04_Style_Guide.md</code> (visual direction).</em></p>
+<p><strong>Authority note.</strong> The brief is locked on product decisions and this document does not relitigate them. The style guide explicitly invites refinement of palette and type, and §4 takes that invitation with contrast math. §1 flags places where evidence contradicts a stated premise — those are for the founder to accept or reject, not design-side decisions.</p>
+<p><strong>Evidence base.</strong> Four research streams: nutrition/calorie-tracker UX, maternal/postpartum/femtech UX, cross-domain design, and a Reddit qualitative pass (§0A). Primary sources were App Store metadata and verbatim customer-review corpora (<code>itunes.apple.com/lookup</code> and the customer-reviews RSS), live CSS harvests of competitor sites, published product documentation, peer-reviewed literature via PubMed/Europe PMC, and ~35 Reddit threads read in full with comments. Where a claim could not be verified it is marked <strong>[unverified]</strong>.</p>
+<p><strong>A note on §0A.</strong> The first three streams were run without Reddit access (403 on automated fetch), which left the largest hole in the research — this audience does its actual thinking in public there. The Reddit pass was added afterwards via a rendered browser session, and it overturned or sharpened several conclusions. Where it does, the earlier section carries a pointer. §0A.7 is the summary of what changed.</p>
+<hr />
+<h2 id="0-the-ten-things-that-should-change">0. The ten things that should change</h2>
+<p>Ordered by how much they alter the current design. Items 8–10 came from the Reddit pass (§0A) and are the ones most likely to be uncomfortable.</p>
+<ol>
+<li><strong>Invert the headline number.</strong> Not "1,460 remaining" but <strong>"Still to eat today: 550."</strong> Simple's Safe-to-Spend is the only mainstream product that ever solved this inversion, and it solved it by changing the arithmetic, not the chart. §2.4.</li>
+<li><strong>Draw the floor as a region, not a line.</strong> A hairline radial tick invites knife-edge anxiety and is hard to label. Every working precedent — Dexcom's AGP, Gentler Streak's Activity Path, MacroFactor's maintenance dial — renders the safe state as a <em>band</em> with a dead zone. §2.5.</li>
+<li><strong>Encode state in geometry, not hue.</strong> Baby-tracker users report that amber and yellow icons are indistinguishable in dark mode and that thin red graph lines vanish. A sage/amber/coral banner is a documented failure mode at 3am. §4.5.</li>
+<li><strong>The supply verdict must be self-referential, never normative.</strong> KellyMom — the clinical authority the target user already reads — states plainly that pump output is <em>not</em> a valid measure of supply. "Compared to your own last 7 days" survives that critique. "Compared to typical" does not. §3.</li>
+<li><strong>Ship user-declarable suspension states.</strong> Oura's Rest Mode and Gentler Streak's illness/injury/vacation statuses converged independently. Yours: <em>baby is sick, I'm sick, cluster feeding, travelling.</em> Suspends floor-miss accounting, preserves the streak, changes the copy. §6.4.</li>
+<li><strong>Drop three unverified claims from the pitch and the copy.</strong> "23 minutes to refocus" is not in the paper everyone cites. Red-shifted night mode has no melatonin evidence. Clue's "award-winning" status has no retrievable record. §1.</li>
+<li><strong>Fix the amber.</strong> Amber 600 <code>#C98A2D</code> on Cream is <strong>2.75:1</strong> — it fails even the 3:1 floor for graphical objects, and 2.57:1 on its own tint. The supply-dip state is currently the least legible thing in the system. §4.1.</li>
+<li><strong>Design for <em>decreasing</em> daily interaction.</strong> Your competitor is not another tracker — it is <strong>abandonment</strong>. She quits logging at 2–8 weeks and calls it a mental-health win, with community backing. A calorie ring <em>plus</em> a daily check-in is two daily obligations imposed on a population organising to quit logging. §0A.2.</li>
+<li><strong>Build a graceful story for flat-or-rising weight.</strong> A large, loud cohort <strong>gains</strong> weight while nursing. A product whose loop is "stay above the floor and the weight comes off" fails them by design. §0A.5.</li>
+<li><strong>Put the clinical credential in front of the paywall, not behind it.</strong> Credentialing — not features — is the axis on which this audience decides whether to pay for nutrition advice, and they have been burned. §0A.4.</li>
+</ol>
+<hr />
+<h2 id="0a-addendum-reddit-field-evidence">0A. Addendum — Reddit field evidence</h2>
+<p><em>Added after the initial draft. Reddit was inaccessible to the first three research passes and was the largest gap in the document; this section closes it. ~35 threads read in full with comments, across r/breastfeeding, r/beyondthebump, r/NewParents, r/ExclusivelyPumping, r/Mommit, r/loseit, r/1200isplenty, r/Myfitnesspal, r/workingmoms. Upvote counts are given so consensus can be distinguished from outliers.</em></p>
+<h3 id="0a1-the-best-news-in-this-document-the-floor-is-already-installed">0A.1 The best news in this document: the floor is already installed</h3>
+<p>You are not teaching a concept. You are <strong>arbitrating a number.</strong></p>
+<p>The floor exists in the wild as a folk model, stated unprompted, with exactly the structure you are building — a number below which you must not go, <em>because of the baby</em>:</p>
+<blockquote>
+<p>"My understanding is that &lt;1500 calories can drastically affect your milk supply." — 19↑, Nov 2025
+"I was advised not to eat under 1500 calories a day." — Feb 2024
+"you dont wanna eat below 1800" — Nov 2025</p>
+</blockquote>
+<p>The number varies (1500 / 1800 / 2000); the mental model does not. This substantially de-risks the onboarding and makes the target-preview screen more valuable than the brief assumed — its job is to <em>settle an argument she is already having</em>, not to introduce an idea.</p>
+<p>It also has <strong>cross-ideological legitimacy</strong>, which is rare. r/1200isplenty — the most restriction-tolerant sub on Reddit — enforces the floor for nursing members: <em>"restricting at all killed my supply (and I had plenty)"</em> (26↑). Even people who have opted into aggressive restriction carve out this exception.</p>
+<p><strong>Design consequence:</strong> soften §2.3's emphasis on explaining the floor concept. The inline "What's the floor?" affordance is still needed — but for the <em>ring geometry</em>, not the idea. What she wants explained is <strong>why your number differs from the one she read on Reddit.</strong></p>
+<h3 id="0a2-your-competitor-is-abandonment">0A.2 Your competitor is abandonment</h3>
+<p>The Notes-app hypothesis is <strong>partially wrong</strong>. Notes, paper and whiteboards are real but a minority; Huckleberry's free tier dominates. The actual competitive set, in order:</p>
+<ol>
+<li><strong>Huckleberry free tier</strong> — <em>"Huckleberry is great but premium is overkill"</em> (19↑)</li>
+<li><strong>Quitting entirely</strong> — the dominant outcome</li>
+<li>MyFitnessPal with a hacked-up goal</li>
+<li>Notes / paper / whiteboard</li>
+</ol>
+<p>Quitting is not passive drift. It is a deliberate, celebrated, community-endorsed decision, and there are at least six separate high-engagement threads asking <em>when can I stop</em>:</p>
+<blockquote>
+<p>"All of the tracking apps are your enemy." — <strong>252↑</strong>, top comment on a 180↑ post, Jun 2026
+"I stopped tracking everything… it was one of the best things I did for my mental health." — 40↑
+"Am I the only one that absolutely hates baby tracking apps? I've tried a few and they're all data overload." — 94↑
+"Some ppl find data calming and some find it anxiety inducing. If you're the latter then skip it." — 30↑</p>
+</blockquote>
+<p>Typical stopping point: <strong>2 weeks to 2 months</strong>, usually pegged to a pediatrician weight check.</p>
+<p>There is also active <strong>log falsification</strong> to reduce anxiety:</p>
+<blockquote>
+<p>"Every day, multiple times a day, I have to remind myself that if the time spent feeding is off by seconds/minutes, it DOES NOT MATTER." — 180↑
+"I lie most of the time though so as long as I know what time I started I just go eeeehhhh reset to 20 minutes." — 55↑</p>
+</blockquote>
+<p><strong>Design consequences, and these are significant:</strong></p>
+<ul>
+<li><strong>A precise numeric floor displayed against a precisely-logged intake is the interaction pattern she is describing as harmful.</strong> Prototype a low-precision input mode — <em>roughly enough / not sure / definitely not enough</em> — as a first-class alternative to gram-level logging. This pairs naturally with the numbers-off mode in §8.2-J, which should now be considered core.</li>
+<li><strong>The product should ask for less over time, not more.</strong> A tracker that gets quieter as she stabilises is a genuinely differentiated proposition in this category and directly answers the stated reason for quitting.</li>
+<li>The 7-day smoothed weight trend is your safest surface: one input, a week of signal.</li>
+<li><strong>The one thing that keeps an app alive past week six is shared state with a partner</strong> — <em>"my wife asking 'when did he last eat and how much' caused so much anxiety"</em> (34↑). You have no partner story. That is the incumbent's retention hook and it is worth deciding deliberately whether to cede it.</li>
+</ul>
+<h3 id="0a3-the-myfitnesspal-hack-precisely-and-it-is-broken">0A.3 The MyFitnessPal hack, precisely — and it is broken</h3>
+<p>Three distinct workarounds exist and users disagree about which is right:</p>
+<ul>
+<li><strong>Negative-calorie food entry</strong> — log "breastfeeding" as a food worth −500. The folk-famous one: <em>"there is also a 'food' option for breastfeeding that was like -500 calories."</em></li>
+<li><strong>Custom exercise entry</strong> — fragile: <em>"if you use a tracker like Fitbit, then this won't work because your tracker will override it."</em></li>
+<li><strong>Lie to the app</strong> — set the goal to maintain, or overstate activity, and let nursing create the deficit invisibly: <em>"I have it set to maintain weight and then I let my breastfeeding calories make a deficit."</em></li>
+</ul>
+<p><strong>The negative-food method has quietly stopped working.</strong> A mother returning for her second baby, Jun 2026: <em>"When I had my first almost four years ago, you could enter breastfeeding as a food under calories and it would add calories to your daily goal."</em> The thread has four comments and no resolution. The 2016 threads describing the old method still rank in search.</p>
+<p>Two things follow. First, <strong>every one of these workarounds raises a ceiling; none creates a floor.</strong> Nobody has a tool that stops them going too low — the hacks exist to stop the app <em>under</em>-feeding them, which is the same need stated in the opposite direction. Second, there is a live, high-intent, unserved search query here — women following stale advice into a dead end. That is a distribution opportunity as much as a product one, and it is cheap: write the replacement guide.</p>
+<p>Adjacent, and worth noting for the Trends screen: <em>"Looking at my Apple fitness, it honestly drags me down"</em> (in a 37↑ thread titled "Petition to have breastfeeding included on fitness apps"), and Fitbit <em>"still doesn't have a pregnancy and postpartum option so it keeps telling me my next predicted period is today"</em> (6↑).</p>
+<h3 id="0a4-what-she-believes-who-she-trusts-and-what-unlocks-payment">0A.4 What she believes, who she trusts, and what unlocks payment</h3>
+<p>The dominant belief is a <strong>500/500 coincidence heuristic</strong> repeated near-verbatim across years and subs: nursing burns ~500 kcal/day, 1 lb/week needs a 500 kcal/day deficit, therefore nursing <em>is</em> your deficit and you should cut nothing.</p>
+<p><strong>Sourcing is peer-to-peer, not clinical.</strong> Across the whole corpus: four mentions of IBCLC/LC/La Leche League, and <strong>zero mentions of KellyMom.</strong> What appears instead is active distrust of general clinicians on this specific question. To a woman whose GP said cutting calories was fine if she hydrated, the top comment by a wide margin was <strong>"Oh my God get a new doctor"</strong> (86↑).</p>
+<p>The single most instructive thread is the <strong>1300-calorie dietitian</strong> case (66↑, 157 comments, Sep 2025): OP paid an Instagram "dietitian" for a personalised plan and was given 1300 kcal. The reaction:</p>
+<blockquote>
+<p>"Are you certain they are a registered dietitian? Because that plan sounds like the 💩 a nutritionist (unregulated and No education standards) would suggest." — <strong>458↑</strong>, top comment by 3×
+"I feel like 'Do not pay for medical advice from Instagram accounts' is a good rule of thumb." — 124↑</p>
+</blockquote>
+<p>That thread proves three things at once: a too-low number triggers mass outrage; <strong>credentialing is the axis on which they judge a paid nutrition product</strong>; and they <em>will</em> pay for this and then get burned.</p>
+<p><strong>On pricing.</strong> Postpartum spending is discussed mostly as regret — <em>"I regret so much of the money I have spent during pregnancy"</em> runs to 1917↑ and 534 comments, with self-aware asides about being a marketing target. Observed price points: Baby Daybook $5/mo (paid, positive); Huckleberry premium rejected as "overkill" and bought only at 50% off; lactation consultants discussed via <strong>insurance coverage</strong>, not cash price. They pay real money for hardware and human expertise — SNOO at ~$1,700 is debated seriously — but they price it as <strong>a bet on fit, not a subscription</strong>, and immediately look for rental or resale. Nobody in the corpus expressed willingness to pay a recurring fee for reassurance.</p>
+<p>$79.99/yr is roughly 1.3× a rejected Huckleberry premium, in a category this audience has been burned by. <strong>The credential is the pricing lever, and it must be visible before the paywall.</strong> The brief already puts the plan reveal before the account wall; put the named RD/IBCLC there too.</p>
+<h3 id="0a5-two-things-that-will-break-the-current-design">0A.5 Two things that will break the current design</h3>
+<p><strong>A large cohort gains weight while nursing, and feels betrayed about it.</strong> In an ExclusivelyPumping thread asking whether pumping helps with weight loss, the top comment is <em>"Lol no. Some of us lucky ones gain weight"</em> (161↑), followed by <em>"Pumping made me put on 15-20 lbs"</em> (40↑).</p>
+<p>A product whose core loop is <em>stay above the floor and the weight comes off</em> actively fails these users, and they are vocal. The 7-day trend needs a designed, non-apologetic state for <strong>flat or rising</strong> — one that does not read as failure and does not immediately propose a bigger deficit. The floats-and-sinkers device (§8.2-B) helps here; the "days protected" metric (§8.2-D) helps more, because it is a win condition that does not depend on the weight moving at all.</p>
+<p><strong>The emotional register is grief and surrender, not panic.</strong> She has usually already tried and already quit:</p>
+<blockquote>
+<p>"Anytime I adjust my calories, my milk supply takes a huge dip. It's devastating." — 61↑
+"I tracked calories and would lose my supply if I cut back even like 100 calories." — 40↑
+"I don't know anyone who lost weight while breastfeeding that didn't suffer supply dips." — 24↑
+"I'm just going to be fat for a little while and that's OK. Right now to me breast-feeding is more important than losing the weight." — <strong>60↑</strong></p>
+</blockquote>
+<p>That last one is often the highest-voted comment in its thread. <strong>This is a different onboarding than "she's about to start."</strong> She is returning to something that hurt her. The target-preview screen should acknowledge the previous failure rather than presenting a fresh optimistic plan.</p>
+<p>Note also the dissent: roughly 20–25% of comments in deficit threads report cutting 250–500 kcal with no supply effect, and nobody can predict which group they are in. The community says so explicitly — <em>"There's not a good way to know which type you are"</em> (3↑). That sentence is arguably your product thesis in one line, and it is a better headline than anything currently in the positioning.</p>
+<h3 id="0a6-her-language-use-these-words">0A.6 Her language — use these words</h3>
+<p><strong>What she says about her own body</strong>, self-critical register (the vocabulary is strikingly consistent — <em>disgusting, foreign, stranger, hate, deflated</em>):</p>
+<blockquote>
+<p>"I'm 8 months postpartum, and I can't even stand to look at myself in the mirror. I hate the way I look, I'm disgusted by my body." — 514↑
+"I feel so foreign in my body." — 33↑
+"Still have around 30 lbs of extra weight, feel like a stranger in my own body." — 25↑</p>
+</blockquote>
+<p>The <strong>self-accepting</strong> register is plain, tired and practical — <em>"I'm just going to be fat for a little while and that's OK."</em> It is emphatically <strong>not</strong> wellness-brand vocabulary. Nobody says "love your body," "honour your body," or "nourish." Adding those to the copy would alienate her as surely as diet-culture language.</p>
+<p><strong>The functional framing she volunteers unprompted is the best onboarding copy in this entire document:</strong></p>
+<blockquote>
+<p>"I just wanna lose the weight because my knees can't take me bending down to pick up my heavy baby off the floor 100 times a day anymore." — 20↑</p>
+</blockquote>
+<p>The highest-upvoted statement of motivation in the corpus is about <strong>load-bearing capacity, not appearance.</strong> Every brand in this space leads with how she looks. Lead with what she can carry.</p>
+<p><strong>Can she say "weight loss" out loud?</strong> Yes — but almost always with a defensive preamble, and this pattern is strong:</p>
+<blockquote>
+<p>"Hate to use the term 'bounce back' but I don't know how else to phrase this." — 346↑
+"I'll preface this with a TW as I'd like to talk about postpartum weight loss and understand this is a sensitive topic for some." — 55↑</p>
+</blockquote>
+<p>She puts a trigger warning on her own weight-loss post. Meanwhile "bounce back" is under active community prosecution: <em>"Do we ever bounce back from age 30 to 28? … THIS TERM IS ILLOGICAL"</em> (44↑).</p>
+<p><strong>So: you may name weight loss directly — but as her stated goal, never as your product's promise — and you should supply the permission structure she is currently improvising for herself.</strong> The banned-lexicon list in the style guide is correct and confirmed.</p>
+<p><strong>What makes her recoil</strong> is narrower and more specific than "diet culture." Three separable triggers:</p>
+<ol>
+<li><strong>Anyone else naming her body.</strong> This produces the largest engagement in the dataset — a "husband asked me to lose weight" thread runs 563↑ / 542 comments; the highest-scoring single comment encountered anywhere in this research (<strong>1079↑</strong>) is a flat refusal to be diplomatic about in-laws suggesting weight-loss drugs.</li>
+<li><strong>Paid advice that undershoots.</strong> Treated as fraud, not error. §0A.4.</li>
+<li><strong>Anything that smells like marketing.</strong> <em>"I hate how everything is either an ad or feels like one and that makes me pull back from a lot"</em> (157↑), in a 1351↑ thread whose top comment is <em>"Nothing has helped my motherhood like getting off all social media"</em> (2043↑).</li>
+</ol>
+<p>Crucially, <strong>none of the recoil is triggered by weight loss as a goal.</strong> Self-initiated weight-loss threads are welcomed and supported. The trigger is <em>who names it</em> and <em>whether the numbers are safe</em>.</p>
+<p>There is also a dark-humour register worth knowing before writing any copy: <em>"I'm just one stomach flu away from my goal weight"</em> (266↑).</p>
+<h3 id="0a7-revisions-to-earlier-conclusions">0A.7 Revisions to earlier conclusions</h3>
+<table>
+<thead>
+<tr>
+<th>Earlier finding</th>
+<th>Reddit verdict</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pump output is not a valid supply measure (§1.1)</td>
+<td><strong>Confirmed, with a twist.</strong> The doctrine is well known and evangelised — the canonical thread is literally titled <em>"Pumping is not an indicator of supply!!!"</em> (170↑) — yet in every weight-loss thread, women report supply status in ounces pumped. This is a <strong>behaviour gap, not an education gap.</strong> Telling her again will not work. <strong>Accept the pump number and reframe it</strong> rather than refusing it.</td>
+</tr>
+<tr>
+<td>No app states a supply verdict — would anyone want one? (§1.2)</td>
+<td><strong>Confirmed, and demand is stronger than expected.</strong> "How do I know if my supply tanked", "Am I starving my baby?" recur constantly, and the community's own answer is an admission that the verdict is unavailable. She is currently getting her verdict from strangers on Reddit at 3am. <strong>This is the wedge</strong> — but she will only accept a verdict from a source she believes is credentialed.</td>
+</tr>
+<tr>
+<td>The real competitor is Notes / texting</td>
+<td><strong>Partially contradicted.</strong> Reframe: Huckleberry's free tier, then abandonment, then hacked MFP, then Notes. §0A.2.</td>
+</tr>
+<tr>
+<td>Hostile to diet-culture framing</td>
+<td><strong>Confirmed, but narrower than stated.</strong> The hostility targets other people naming her body, unsafe numbers, and marketing gloss — not weight loss as a goal. Over-rotating into wellness-speak would alienate her equally. §0A.6.</td>
+</tr>
+<tr>
+<td>Would she grasp a calorie floor?</td>
+<td><strong>Yes, immediately.</strong> Already installed as a folk model. §0A.1.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="1-corrections-to-premises">1. Corrections to premises</h2>
+<p>These are evidence problems, not taste disagreements.</p>
+<h3 id="11-pump-output-is-not-a-valid-supply-metric-and-your-user-knows-that">1.1 Pump output is not a valid supply metric — and your user knows that</h3>
+<p>Kelly Bonyata, IBCLC, on KellyMom, which is the single most-read lactation resource among this audience:</p>
+<blockquote>
+<p>"the feel of the breast, the behavior of your baby, the frequency of nursing, the sensation of let-down, or the amount you pump are not valid ways to determine if you have enough milk for your baby"</p>
+<p>"The amount of milk that you can pump is not an accurate measure of your milk supply."</p>
+</blockquote>
+<p>The brief's check-in asks exactly these three things: feeds felt normal, pump output vs. usual, baby seemed satisfied. Clinically, none is a valid absolute indicator. <strong>This does not kill the feature — it constrains the framing absolutely.</strong></p>
+<ul>
+<li>Safe: <em>"Your check-ins have been steady for 5 days"</em> — a statement about her reported experience over time.</li>
+<li>Unsafe: <em>"Your supply is good"</em> — a clinical claim the app cannot substantiate and an IBCLC advisor will strike.</li>
+<li>Unsafe: <em>"Your output is above typical"</em> — normative benchmarking, which is what the one existing competitor does and what KellyMom specifically warns against.</li>
+</ul>
+<p><strong>Revised by §0A.7.</strong> The Reddit pass shows this is a <em>behaviour</em> gap, not an education gap: the audience knows the doctrine well enough to evangelise it — the canonical thread is titled <em>"Pumping is not an indicator of supply!!!"</em> (170↑) — and reports supply in ounces pumped anyway. Refusing the number will read as the app being unhelpful. <strong>Accept the pump figure, then reframe it</strong> against her own baseline rather than a norm.</p>
+<p>There is also an operational bias worth designing around, verbatim from a pumping-app user: <em>"my data… is skewed because I haven't had the energy to follow this step when I pump in the middle of the night."</em> Missing check-ins correlate with the hardest days, which means naïve trend logic will read exhaustion as improvement.</p>
+<h3 id="12-supply-status-is-near-novel-but-the-window-is-closing">1.2 "Supply status" is near-novel — but the window is closing</h3>
+<p>Prior-art verdict:</p>
+<table>
+<thead>
+<tr>
+<th>Capability</th>
+<th>Prior art</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Logging ounces pumped</td>
+<td>Universal commodity</td>
+</tr>
+<tr>
+<td>Charting output over days/weeks</td>
+<td>Common — 10+ apps</td>
+</tr>
+<tr>
+<td>An app <strong>stating a verdict</strong> on supply</td>
+<td>Near-zero — one product</td>
+</tr>
+<tr>
+<td>A named "supply status" banner / stoplight</td>
+<td><strong>Zero instances found</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The one competitor: <strong>Pump Coach: Pumping Tracker</strong> (App Store id 6765497176, Clarks Condensed LLC / The Breastfeeding Mama), released <strong>August 3, 2026 — two weeks ago — with three ratings.</strong> IBCLC-built, with an IBCLC client dashboard. Its store copy:</p>
+<blockquote>
+<p>"Today's output at a glance, with your daily goal front and center • 7-day trends, session quality scores, and output-per-hour compared to typical • Find your best time of day and most productive pump settings • Insights written for real life — encouraging, not anxiety-inducing."</p>
+</blockquote>
+<p>Four things to note. It <strong>scores sessions</strong> and benchmarks <strong>"compared to typical"</strong> — the normative move that fails §1.1. It is <strong>defensive about tone in its own store listing</strong>, which tells you the founder already knows this is the risk. The verdict layer is <strong>paywalled</strong>. And it has an IBCLC distribution channel, which is your channel too. Treat it as a real competitor for the positioning even though it is executionally tiny.</p>
+<p>Also relevant: <strong>LactApp</strong> (id 1040787494) already ships a question-driven flow with a verdict card titled <em>"LactApp responds"</em> — tailored questions against 2,300 stored answers. It has no supply chart and no score, but the <em>interaction pattern</em> of your check-in is not new to this audience.</p>
+<h3 id="13-23-minutes-to-refocus-is-not-a-real-finding">1.3 "23 minutes to refocus" is not a real finding</h3>
+<p>The figure is universally attributed to Mark, Gonzalez &amp; Harris (2005). It is not in that paper. The actual number is <strong>25 min 26 sec (sd = 54 min 48 sec)</strong> and it measures <em>elapsed wall-clock time before returning to a "working sphere"</em> — not a cognitive refocus cost — in N=24 workers at one financial-IT firm.</p>
+<p>What the literature actually supports:</p>
+<ul>
+<li><strong>Mark, Gudith &amp; Klocke (2008)</strong>, N=48: interrupted work was completed <em>faster</em> (22.77 → 20.31 min). The cost is affective — stress 6.92 → 9.46, frustration 4.73 → 6.63. Crucially, <strong>interruption context did not matter</strong>, which kills the intuitive "it's a baby app, so a baby interruption is fine" argument.</li>
+<li><strong>Monk et al. (2008)</strong>: resumption lag <strong>1,548 ms</strong> vs. 949 ms baseline — a real cost of roughly <strong>600 ms</strong>, with the disruption curve asymptoting <strong>between 13 and 23 seconds</strong>.</li>
+</ul>
+<p><strong>Design implication.</strong> The cost of interrupting her is emotional, not temporal, and the recovery window is ~15–20 seconds. That is a strong argument for the sub-10-second interaction target already in the brief, and a strong argument that state preservation matters more than speed. Remove the 23-minute stat from any deck.</p>
+<h3 id="14-red-night-mode-has-no-evidence-behind-it">1.4 Red night mode has no evidence behind it</h3>
+<ul>
+<li>Chang et al. (2015) found 55.12 ± 20.12% melatonin suppression but conceded the effect <em>"may be due to the difference in irradiance level rather than spectral composition."</em></li>
+<li>Nagare et al. (2019): Night Shift interventions <strong>did not significantly differ</strong>.</li>
+<li>Duraccio et al. (2021), RCT n=167: <strong>no sleep-outcome differences attributable to Night Shift.</strong></li>
+<li>Phillips et al. (2019): individual sensitivity (ED50) ranged <strong>6 lux to 350 lux — a ~58-fold spread.</strong></li>
+</ul>
+<p><strong>Supported:</strong> reducing total emitted light. <strong>Not supported:</strong> that an amber or red colour shift does anything on its own. Build the dim mode — just never market it as protecting her sleep hormones. The defensible resolution is: dark surface, <strong>20pt minimum type</strong>, Dynamic Type to AX5, and near-white foreground at <strong>7:1 (AAA)</strong> — never dim-grey-on-black, which is the actual legibility failure in this category.</p>
+<h3 id="15-smaller-corrections">1.5 Smaller corrections</h3>
+<ul>
+<li><strong>Clue's "award-winning" status is unconfirmed</strong> — no Red Dot, iF, D&amp;AD or Webby record found. Clue's identity was also <strong>in-house, not agency work</strong>. Cite Clue for its philosophy, not its trophies. <strong>[unverified]</strong></li>
+<li><strong>Frida Mom's identity is in-house</strong>; no agency case study exists, and the Oscars ad is <strong>wordless</strong> — no voiceover. <strong>[unverified]</strong></li>
+<li><strong>Dawson &amp; Reid (1997)</strong> does not contain the "17 hours awake ≈ 0.05% BAC" numbers. Cite <strong>Williamson &amp; Feyer (2000)</strong> instead.</li>
+<li><strong>"The Fifth Trimester" is not a Peanut campaign</strong> — it is Lauren Smith Brody's book.</li>
+<li><strong>Canopie has no peer-reviewed RCT</strong> — a self-published N=100 study, Hedges g = 0.68.</li>
+<li><strong>No app anywhere was verified to publicly say "we don't do streaks."</strong> If that claim appears in positioning, it is unproven.</li>
+<li><strong>Microsoft's Persona Spectrum "holding a baby" row could not be verified verbatim</strong> — it exists only inside an image-rendered PDF. Open it visually before quoting it. The verified principles (<em>"Recognize exclusion," "Solve for one, extend to many"</em>) make the same argument safely.</li>
+</ul>
+<hr />
+<h2 id="2-the-central-design-problem-the-floor">2. The central design problem: the floor</h2>
+<h3 id="21-you-are-inverting-a-metaphor-200-million-people-have-already-learned">2.1 You are inverting a metaphor 200 million people have already learned</h3>
+<p>MyFitnessPal's home number is <strong>Remaining</strong>, computed as <code>Goal − Food + Exercise = Remaining</code>, with the explicit stated intent that <em>"at the end of the day, Remaining Calories should approach zero."</em></p>
+<p>The entire mainstream mental model is <strong>drain-to-zero</strong>. Yours is <strong>fill-to-safe</strong>. You cannot reuse the visual grammar of depletion — a ring emptying, a number counting down, red on exceed — without importing the wrong instinct along with it.</p>
+<p>A second trap in the same formula: MFP <em>adds exercise calories back</em> as spendable credit. Lactation costs roughly 500–700 kcal/day, but it is involuntary. If you ever surface <em>"breastfeeding earned you 500 cal,"</em> you have rebuilt the exercise-credit loop that users already distrust as double-counting — and that the ED literature (§10) identifies as a mechanism of harm.</p>
+<h3 id="22-mfp-already-has-a-calorie-floor-it-is-the-exact-anti-pattern">2.2 MFP already has a calorie floor. It is the exact anti-pattern.</h3>
+<p>MFP warns when a completed day falls under ~1,000 kcal. Users experience it as scolding:</p>
+<blockquote>
+<p>"It reprimands you if you go under 1000 calories for the day which is ridiculous" — 2★</p>
+</blockquote>
+<p>And the inverse complaint, which is your product thesis written by a stranger:</p>
+<blockquote>
+<p>"your caloric intake should not be below your BMR… years ago in the beginning of my weight loss journey the calories goals had me at 1100 calories and I found out my BMR was closer to 1400. This had a profound effect on my mental health and weight loss. I had chronic fatigue and anxiety. It was awful. <strong>There was no warning about consuming lower calorie and being in starvation. There was no place I could add a BMR so the app would take that into account.</strong>" — 3★</p>
+<p>"the team needs to do more work into finding an appropriate caloric amount for goals (it's far too low and leads to an ED mindset)." — 3★</p>
+</blockquote>
+<p>Four failure modes to invert deliberately:</p>
+<table>
+<thead>
+<tr>
+<th>MFP's floor</th>
+<th>Yours</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Invisible until the day closes</td>
+<td>Live on the primary gauge all day</td>
+</tr>
+<tr>
+<td>Retrospective</td>
+<td><strong>Predictive</strong> — fires when the projected day will land under</td>
+</tr>
+<tr>
+<td>A hardcoded global constant (1,000)</td>
+<td>Individualized: BMR + lactation load + weeks postpartum + feeding mix</td>
+</tr>
+<tr>
+<td>Expressed as a reprimand</td>
+<td>Expressed as a remaining obligation</td>
+</tr>
+</tbody>
+</table>
+<h3 id="23-the-unlabelled-arc-problem">2.3 The unlabelled-arc problem</h3>
+<p>The most useful single verbatim in the corpus, from a <em>paying</em> MFP subscriber, 2★:</p>
+<blockquote>
+<p>"Look at the dashboard. The middle third of the screen has a mildly useful chart. Bottom third is an ad. The top third is some strange progress bar, I guess, but it's <strong>curved for some unknown reason, and no indication what progress is being represented.</strong> Progress toward me deleting the app?"</p>
+</blockquote>
+<p>A Premium user could not decode MFP's calorie arc. Yours carries a <em>second</em> semantic on the same geometry. Two consequences:</p>
+<ul>
+<li>The floor needs a <strong>persistent adjacent text label</strong>, not a legend and not an onboarding explanation.</li>
+<li>Ship an inline <strong>"What's the floor?"</strong> button next to the ring. This is Gentler Streak's published lesson about their own non-standard boundary metaphor: <em>"when people discover it and it clicks what it does, it becomes a hero feature"</em> — so they added a permanent inline explainer button rather than relying on onboarding.</li>
+</ul>
+<p><strong>Revised by §0A.1.</strong> The <em>concept</em> needs less explaining than assumed — the floor already exists as a folk model in this audience, with people quoting 1500 / 1800 / 2000 unprompted. What the explainer must actually answer is narrower and more urgent: <strong>"why is your number different from the one I read on Reddit?"</strong> Point it at the arithmetic, not the idea.</p>
+<h3 id="24-the-strongest-idea-in-this-document-subtract-the-floor-out">2.4 The strongest idea in this document: subtract the floor out</h3>
+<p>Simple's Safe-to-Spend showed <strong>balance minus scheduled bills, minus goals, minus pending</strong> as one number that was already protected. The coverage explains why it worked: <em>"the app only presents the Safe-to-Spend amount — not an available balance… making sure the consumer doesn't spend money they would rather not spend."</em> When it shut down in 2021, users wrote elegies: <em>"the first financial tool that felt like it was designed for them rather than against them."</em></p>
+<p>The trick is that <strong>it reframed the arithmetic, not the chart.</strong> It never drew a floor line; it subtracted the floor out of the headline number.</p>
+<p>Applied here:</p>
+<blockquote>
+<p><strong>Instead of</strong> "1,460 remaining · Floor: 1,800 — you're safely above it"
+<strong>Show</strong> "Still to eat today: <strong>550</strong>"</p>
+</blockquote>
+<p>The number counts down to zero and <strong>stops</strong>. Zero is the win state. There is no negative, no exceed, no red. Above zero the copy becomes a stable positive terminal state — <em>"You're above your floor."</em> You cannot feel bad about overspending a number that only measures what you still owe yourself.</p>
+<p>This is worth prototyping as the <strong>widget, Lock Screen, and Watch complication variant</strong> even if the ring stays the in-app hero. It is the single highest-leverage idea here, and it comes from the only product that solved this inversion commercially.</p>
+<h3 id="25-ring-vs-bar-and-why-the-floor-should-be-a-band">2.5 Ring vs. bar — and why the floor should be a band</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Ring / arc</th>
+<th>Horizontal bar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Reads in ~1s</td>
+<td>Strong</td>
+<td>Strong</td>
+</tr>
+<tr>
+<td>Big centre number</td>
+<td>Native</td>
+<td>Awkward</td>
+</tr>
+<tr>
+<td>Marking an internal threshold</td>
+<td><strong>Weak</strong> — a radial tick is hard to label and reads as a needle</td>
+<td><strong>Strong</strong> — a vertical tick with a label beneath is unambiguous</td>
+</tr>
+<tr>
+<td>"Fill toward safety" affordance</td>
+<td>Strong (Apple Activity rings)</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Zone shading</td>
+<td>Good as arc segments</td>
+<td>Excellent</td>
+</tr>
+<tr>
+<td>Thin-stroke legibility in dark mode</td>
+<td><strong>Weaker</strong></td>
+<td>Better</td>
+</tr>
+</tbody>
+</table>
+<p>Note that Apple's Activity rings are the <em>right</em> ring precedent and MFP's remaining-calories ring is the wrong one: "close your rings" is already a fill-to-goal, minimum-achievement metaphor with no ceiling and no failure-by-exceeding, understood by hundreds of millions of people.</p>
+<p><strong>Recommendation — hybrid.</strong></p>
+<ul>
+<li>Keep the ring as the emotional object with the number in the centre. Users explicitly praise this on the Watch: <em>"circles showing how much portions are remaining at the center, and a line around the circumference to portray how much you have consumed"</em> — and note they describe it as <strong>filling</strong>.</li>
+<li>Render the below-floor region as a <strong>filled arc sector in a distinct treatment</strong>, from 0° to the floor angle — a zone the fill has to cross out of — not as a hairline tick.</li>
+<li>Make the safe state a <strong>band, not an edge</strong>: "your protected zone: 1,800–2,300." A single line invites just-above anxiety. MacroFactor's shipped maintenance dial uses exactly this — an Under / OK / Over gauge with a <strong>±1.5 lb dead band</strong> driven by trend weight, with crossings triggering a small proportional correction rather than an alarm.</li>
+<li>Add a <strong>linear floor bar as the compact representation</strong> (widget, complication, notification), where a labelled tick is legible.</li>
+<li>On crossing the floor, <strong>invert the fill treatment</strong> rather than switching to green. MacroFactor does this on its target bars — the fill flips to black in light mode, white in dark. Cheap, colourblind-safe, dark-mode-safe, and it does not read as diet-culture reward.</li>
+</ul>
+<h3 id="26-three-specific-traps">2.6 Three specific traps</h3>
+<ul>
+<li><strong>Never use red below the floor.</strong> Dexcom can use red because a hypo is an acute emergency; under-eating by 200 kcal on a day she could not control is not. Below-floor should be desaturated and quiet.</li>
+<li><strong>Never let the ring complete and keep going into an over-state.</strong> There is no meaningful penalty at the top. A soft, unpunished ceiling or none at all — otherwise you re-teach the exceed instinct.</li>
+<li><strong>Never show a negative remaining number.</strong> MFP's core failure state is a red negative "Remaining." Yours goes to zero and stops.</li>
+</ul>
+<h3 id="27-the-four-precedents-worth-studying-directly">2.7 The four precedents worth studying directly</h3>
+<p><strong>Dexcom / AGP</strong> — the closest existing analogue, and it is a <em>dual</em>-threshold display. Target range 70–180 mg/dL rendered as a <strong>shaded band spanning the full chart width</strong>, a red line at the low limit, an orange line at the high, separate day/night ranges, and tiered lows (70 = low, 55 = urgent low). Endorsed in ADA Standards of Care rec. 6.4. Two things to steal:</p>
+<ul>
+<li><strong>Predictive breach beats retrospective breach.</strong> Dexcom's <em>"urgent low soon"</em> fires when the value is falling fast, not after the breach. Your nudge should fire at 4pm on a projection, not at 11:59pm on a fact.</li>
+<li><strong>The percentile ribbon.</strong> AGP plots a median line inside a dark 25–75th ribbon inside a lighter 5–95th ribbon. The ribbon <strong>narrows when you're consistent and fattens when you're erratic</strong> — a progress story that doesn't require the number to move. Far kinder than a single line for a user whose intake variance is largely outside her control.</li>
+<li><strong>"Time in Range" as the headline retrospective.</strong> <em>"You were above your floor 26 of the last 30 days"</em> is robust to one bad day, matches the biology (supply responds to sustained intake, not any single day), and is a metric clinicians already recognise.</li>
+</ul>
+<p><strong>MacroFactor's micronutrient model</strong> — the language is already written for you:</p>
+<blockquote>
+<p>"Micronutrient goals in the app consist of a <strong>target and a goal range that is determined by a floor and a ceiling.</strong>"
+"<strong>The floor serves as a practical minimum to stay above.</strong>"</p>
+</blockquote>
+<p>"A practical minimum to stay above" is close to finished UI copy.</p>
+<p><strong>Gentler Streak's Activity Path</strong> — a horizontal corridor through time with over- and under-corridor states, three zoom levels (Daily Readiness / 10-day / 30-day), and a live <em>"countdown to overreaching"</em> on the Watch. Named states rather than scores: <em>"You are Spot On," "Just What You Needed," "State of Extra Recovery," "Overreaching."</em> Apple Watch App of the Year 2022.</p>
+<p><strong>Simple's Safe-to-Spend</strong> — §2.4.</p>
+<hr />
+<h2 id="3-supply-status-the-moat-and-how-to-render-it">3. Supply status — the moat, and how to render it</h2>
+<h3 id="31-what-to-put-in-the-banner">3.1 What to put in the banner</h3>
+<p>Given §1.1, the banner is a statement about <em>her own reported trend</em>, phrased as observation rather than verdict.</p>
+<ul>
+<li>Steady: <strong>"Steady — 5 days of check-ins in your usual range."</strong> Subtitle from yesterday's answers.</li>
+<li>Dipping: <strong>"Two days below your usual."</strong> Then the reason, then the action.</li>
+<li>Escalation: <strong>"Four days now. This is worth a chat with your IBCLC."</strong></li>
+</ul>
+<p>Note the grammar: <em>your usual</em>, never <em>typical</em>, never <em>normal</em>, never <em>good</em>. This is the difference between a defensible wellness claim and a clinical one, and it is also the difference between your positioning and Pump Coach's.</p>
+<p>Borrow Natural Cycles' third state. It is the <strong>only app in the entire study with an explicit insufficient-data colour</strong> — brown, for "more data is needed" — and its engine <em>defaults to the safe state</em> when it lacks information. You need this: a named <strong>"Not enough check-ins to say"</strong> state that is neither steady nor dipping and does not silently read as fine.</p>
+<h3 id="32-phrase-the-check-in-questions-the-way-oura-phrases-contributors">3.2 Phrase the check-in questions the way Oura phrases contributors</h3>
+<p>Oura labels each Readiness contributor with the <em>question it answers</em> rather than the metric it measures — <em>"How well did I sleep last night compared to normal?"</em>, <em>"Did I balance my activity, inactivity and rest yesterday?"</em> Lift this wholesale: each of your three taps answers a named question rather than entering a datum. It also quietly reinforces that the input is subjective report, which is exactly what §1.1 requires.</p>
+<p>Oura's anti-perfectionism copy is also directly transferable: <em>"100s are designed to be rare rather than regular"</em> and <em>"these contributors are less about improving or aiming to hit a certain benchmark and more about being in touch with what your body needs."</em></p>
+<h3 id="33-timers-are-a-trap-and-skipping-them-is-a-real-advantage">3.3 Timers are a trap — and skipping them is a real advantage</h3>
+<p>The brief already excludes nursing/pumping timers from v1. The review corpus strongly validates that. Forgetting to stop a timer is the single most-complained-about interaction in baby trackers, and <strong>no app in the set advertises auto-stop or a duration cap</strong>:</p>
+<blockquote>
+<p>"I tend to forget to stop the sleep tracking… A prompt when I am starting to log feedings or diapers might help."
+"And why don't they cap the timer!"
+"the timer never stopped… I don't know how long I fed."
+"on the watch, if you hit back it cancels it. So many lost sleep tracks!"</p>
+</blockquote>
+<p>A timer-free, event-stamped 3-tap check-in sidesteps the entire class of failure. Say so in the App Store copy.</p>
+<hr />
+<h2 id="4-colour">4. Colour</h2>
+<h3 id="41-contrast-audit-of-the-current-palette">4.1 Contrast audit of the current palette</h3>
+<p>Computed WCAG 2.1 ratios for the tokens in <code>04_Style_Guide.md</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Pair</th>
+<th>Ratio</th>
+<th>Verdict</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ink <code>#2B2B28</code> on Cream <code>#FAF7F2</code></td>
+<td><strong>13.29:1</strong></td>
+<td>Excellent — AAA</td>
+</tr>
+<tr>
+<td>Ink-soft <code>#6B6A64</code> on Cream</td>
+<td><strong>5.08:1</strong></td>
+<td>AA body text ✓</td>
+</tr>
+<tr>
+<td>Coral 600 <code>#C4573B</code> on Cream</td>
+<td><strong>4.12:1</strong></td>
+<td>Graphical ✓ · body text ✗ (needs 4.5)</td>
+</tr>
+<tr>
+<td>Sage 600 <code>#5C8D76</code> on Cream</td>
+<td><strong>3.56:1</strong></td>
+<td>Graphical ✓ · <strong>body text ✗</strong></td>
+</tr>
+<tr>
+<td>Amber 600 <code>#C98A2D</code> on Cream</td>
+<td><strong>2.75:1</strong></td>
+<td><strong>Fails everything, including the 3:1 graphical floor</strong></td>
+</tr>
+<tr>
+<td>Amber 600 on Amber 100 <code>#F8EFDD</code></td>
+<td><strong>2.57:1</strong></td>
+<td><strong>Fails badly</strong></td>
+</tr>
+<tr>
+<td>Sage 800 <code>#3D6353</code> on Sage 100 <code>#E8F1EC</code></td>
+<td><strong>5.86:1</strong></td>
+<td>AA text ✓ — the steady banner is fine</td>
+</tr>
+<tr>
+<td>Dark: Sage <code>#7FA893</code> on <code>#211F1C</code></td>
+<td><strong>6.20:1</strong></td>
+<td>Good</td>
+</tr>
+<tr>
+<td>Dark: Text <code>#EDEAE3</code> on <code>#211F1C</code></td>
+<td><strong>13.68:1</strong></td>
+<td>Excellent — exceeds the 7:1 AAA target</td>
+</tr>
+<tr>
+<td>Dark: Text <code>#EDEAE3</code> on surface <code>#2C2A26</code></td>
+<td><strong>11.92:1</strong></td>
+<td>AAA</td>
+</tr>
+</tbody>
+</table>
+<p><em>Ratios computed to WCAG 2.1 relative-luminance formula and verified programmatically.</em></p>
+<p><strong>Two required fixes.</strong></p>
+<ol>
+<li><strong>Sage 600 cannot be a text colour on cream.</strong> At 3.56:1 it is fine as the active ring stroke and fine for ≥18pt/24px display type, but any 17pt body or 15pt secondary text set in sage fails AA. Add a <strong>Sage 700 <code>#456B59</code></strong> for text-on-cream use — <strong>5.61:1</strong>, passes AA.</li>
+<li><strong>Amber 600 must be darkened for anything but large fills.</strong> Recommend <strong>Amber 700 <code>#8F6111</code></strong> — <strong>5.06:1</strong> on cream, <strong>4.73:1</strong> on Amber 100. Both pass AA. Keep <code>#C98A2D</code> only for large fills and banner backgrounds where nothing sits on top of it.</li>
+</ol>
+<p>The dark palette is in good shape and already meets the 7:1 the night-legibility evidence argues for. The steady-state banner (Sage 800 on Sage 100) also passes cleanly — it is specifically the <em>dip</em> state that fails, which is the state that most needs to be read.</p>
+<h3 id="42-the-generic-wellness-risk-worth-taking-seriously">4.2 The generic-wellness risk — worth taking seriously</h3>
+<p>Anthropic's own <code>frontend-design</code> skill names the three aesthetics AI-assisted design converges on. <strong>The first one is warm cream <code>#F4F1EA</code> + high-contrast serif + terracotta accent.</strong> Your canvas is <code>#FAF7F2</code>. That is not a coincidence — it is the attractor.</p>
+<p>The competitive picture makes it worse. Palettes measured from live CSS on August 17, 2026:</p>
+<ul>
+<li><strong>Bodily</strong> — forest <code>#005133</code>, ivory <code>#FFFAF0</code>, greige <code>#F0EDE8</code>, mint <code>#C6E6D7</code>, terracotta <code>#E8946F</code></li>
+<li><strong>Expectful</strong> — greige <code>#F0EFEC</code>, forest <code>#21342B</code>, chartreuse <code>#C1D96A</code></li>
+<li><strong>Hey Jane</strong> — cream <code>#FEF2E6</code>, periwinkle <code>#CCDDFF</code>, coral <code>#F79672</code></li>
+<li><strong>Motherhood Center</strong> — ivory <code>#FFF9F4</code>, navy <code>#102C4E</code>, peach CTA <code>#F7A688</code></li>
+</ul>
+<p>The convergent formula across the entire category is <strong>warm cream ground → deep navy or forest text → one warm accent for action</strong>. Sage-on-cream is squarely inside it. You will be legible and inoffensive and indistinguishable.</p>
+<p>Three ways out, in increasing order of risk. Pick one — the point is to have <em>a</em> deliberate deviation:</p>
+<ol>
+<li><strong>Shift the accent off sage.</strong> Clue's move is instructive: Marta Pucci, <em>"It's red, not pink. A strong seed of life that's not flowerish or super girly."</em> Clue's <code>#A80014</code> is oxblood — warm, serious, unmistakably not-wellness. A deep oxblood or a dark ochre as the primary action colour, with sage demoted to the steady-state tint, would read as considered rather than generic.</li>
+<li><strong>Shift the ground off cream.</strong> A warm greige or a very pale clay rather than cream. Small change, meaningful differentiation.</li>
+<li><strong>Let the palette follow the clock.</strong> §4.4.</li>
+</ol>
+<p>Also worth noting from Clue: <strong>they do use pink-adjacent tints</strong> (<code>#FFEEEB</code>, <code>#FFDBD6</code>) as card backgrounds. The rule was never "no pink" — it was "not pink as <em>identity</em>." The style guide's blanket ban is slightly over-tight; pale warm tints as surfaces are fine and Clue proves it.</p>
+<h3 id="43-the-not-pink-trap-has-two-siblings">4.3 The "not pink" trap has two siblings</h3>
+<p>Pili Laviolette (Random Pattern Studio) names three traps, and the second one is the one you are closest to falling into:</p>
+<blockquote>
+<p>"<strong>Pink isn't the problem. It's the pattern.</strong> The issue isn't using colour, it's relying on the stereotypical meaning behind it."</p>
+</blockquote>
+<ul>
+<li><strong>The Pink Trap</strong> — flowers, pastels, infantilising. You have avoided this.</li>
+<li><strong>The Clinical Trap</strong> — <em>"sterile palettes… works for investors and healthcare partners, but it can alienate users who need empathy as much as evidence."</em> Your positioning leans hard on clinical credibility. This is your real risk.</li>
+<li><strong>The Empowerment Trap</strong> — <em>"bold fonts, loud taglines… can feel performative or even intimidating."</em> Frida Mom lives here, and it cost them: February 2026 Forbes backlash over packaging copy, pulled pages, a 1M+ view TikTok.</li>
+</ul>
+<p>Her conclusion is the right brief: <em>"The goal isn't to reject pink or softness or science. It's to use them intentionally."</em></p>
+<p>Michelle Kennedy of Peanut, on the same theme: <em>"When a woman becomes a mother, she doesn't automatically lose her appreciation for design"</em> — arguing against <em>"icons that scream motherhood, such as prams or a rattle."</em> Your style guide's no-storks-no-cartoon-babies rule is well-founded.</p>
+<h3 id="44-let-the-palette-follow-the-clock">4.4 Let the palette follow the clock</h3>
+<p><strong>Tide Guide</strong> won the 2026 Apple Design Award for Visuals and Graphics, and Apple's citation names exactly one technique: <em>"The app's palette is even designed to match the color of the sky throughout the day."</em></p>
+<p>That is your 3am answer, and it is better than a light/dark toggle:</p>
+<ul>
+<li><strong>Day</strong> — warm off-white ground, sage accents, full contrast</li>
+<li><strong>Evening</strong> — warm dusk, reduced luminance</li>
+<li><strong>2am–5am</strong> — deep warm charcoal (never <code>#000</code>), amber-shifted, low total luminance, with the floor line in a dim amber rather than a saturated alert</li>
+</ul>
+<p>The reasoning is defensible on legibility grounds alone (§1.4): what helps is reducing <em>total emitted light</em>, and a time-driven palette does that continuously rather than in one step. A pure-black OLED UI with a red below-floor indicator at 3am reads as a medical alarm to a sleep-deprived person holding an infant.</p>
+<h3 id="45-the-colour-coding-failure-that-will-bite-you">4.5 The colour-coding failure that will bite you</h3>
+<p>Direct from baby-tracker reviews, and this is the most actionable finding in the maternal research:</p>
+<blockquote>
+<p>"Currently those icons are yellow and orange which are so similar in dark mode I almost tap the wrong one every time"</p>
+<p>"Dark mode doesn't use a very good color palette… It's hard to use the app in dark mode."</p>
+<p>"the red on the graphs barely show as a thin line"</p>
+</blockquote>
+<p>Your supply banner is currently <strong>green = steady, amber = dipping</strong>, and your ring states are <strong>sage / amber / coral</strong>. In a desaturated dark palette at low brightness, sage and amber converge. This is a documented, repeated, real-world failure in exactly your users' hands.</p>
+<p><strong>Encode state redundantly:</strong></p>
+<table>
+<thead>
+<tr>
+<th>State</th>
+<th>Hue</th>
+<th>Geometry</th>
+<th>Position</th>
+<th>Icon</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Steady</td>
+<td>Sage</td>
+<td>Solid fill, full-width band</td>
+<td>—</td>
+<td>Filled shield</td>
+</tr>
+<tr>
+<td>Dipping</td>
+<td>Amber 700</td>
+<td><strong>Dashed / hatched</strong> band, inset</td>
+<td>—</td>
+<td>Outlined shield</td>
+</tr>
+<tr>
+<td>Below floor</td>
+<td>Desaturated</td>
+<td><strong>Sector notch</strong> on the ring</td>
+<td>Distinct</td>
+<td>Half-filled</td>
+</tr>
+<tr>
+<td>Not enough data</td>
+<td>Neutral</td>
+<td><strong>Ghosted outline</strong></td>
+<td>—</td>
+<td>Dotted</td>
+</tr>
+</tbody>
+</table>
+<p>Gentler Streak enumerates support for <em>"bold text, dynamic type, reduced transparency, increased contrast, motion adjustments, and voiceover"</em> — including <strong>Differentiate Without Color</strong>, which a hue-only floor line fails outright. Peanut declares Dark Interface / Differentiate Without Color / Reduced Motion. <strong>Ovia declares none.</strong> Be in the first group.</p>
+<hr />
+<h2 id="5-typography">5. Typography</h2>
+<p>The style guide specifies SF Pro Rounded with Nunito as fallback. Two observations.</p>
+<p><strong>SF Pro Rounded is the safe, correct, invisible choice.</strong> It signals iOS-native, it's warm without being cute, and it will never be the reason someone doesn't trust the app. It is also what every competent iOS wellness app uses, which means it contributes nothing to differentiation.</p>
+<p>What the competition does — measured live:</p>
+<table>
+<thead>
+<tr>
+<th>Brand</th>
+<th>Display</th>
+<th>Text</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bodily</td>
+<td><strong>Louize</strong> (Blaze) 400/~40px</td>
+<td>Apercu (Colophon)</td>
+</tr>
+<tr>
+<td>Expectful</td>
+<td><strong>Teodor</strong> (Newlyn) 300, 52px, −1.04px tracking</td>
+<td>Inter</td>
+</tr>
+<tr>
+<td>Clue</td>
+<td><strong>TT Commons</strong></td>
+<td><strong>Mrs Eaves XL Serif</strong></td>
+</tr>
+<tr>
+<td>Canopie / Hey Jane</td>
+<td>DM Serif Display</td>
+<td>Mulish / Libre Franklin</td>
+</tr>
+<tr>
+<td>Mahmee</td>
+<td>Recoleta</td>
+<td>Lato</td>
+</tr>
+<tr>
+<td>Frida Mom</td>
+<td>GT Walsheim, h1 800/60px UPPERCASE</td>
+<td>GT Walsheim 700</td>
+</tr>
+</tbody>
+</table>
+<p>Clue's pairing rationale is the most instructive: <strong>"geometric sans for data, literary serif for knowledge."</strong> That maps precisely onto your two content types — the numbers she checks in three seconds, and the explanations that earn her trust. Frida is the cautionary case: body copy at weight 700 is, in the researcher's phrase, <em>"the typographic equivalent of being yelled at encouragingly."</em></p>
+<p><strong>Recommendation.</strong> Keep SF Pro Rounded for all numeric and UI surfaces — it is genuinely right for glanceable data and it gets you Dynamic Type and SF Symbols for free. Introduce <strong>one editorial serif</strong> for the explanatory layer only: the target-preview "here's the math" screen, the methodology page, the nudge headlines, the escalation copy. That is where trust is built and where the difference between "an app" and "a knowledgeable friend" is made visually.</p>
+<p><strong>Night-mode floor:</strong> minimum <strong>20pt</strong> type in the 2am–5am palette (not the 13pt general minimum), Dynamic Type support to AX5, and foreground at 7:1.</p>
+<hr />
+<h2 id="6-layout-and-interaction">6. Layout and interaction</h2>
+<h3 id="61-thumb-zones-use-the-2017-numbers-not-the-famous-ones">6.1 Thumb zones — use the 2017 numbers, not the famous ones</h3>
+<p>The widely-circulated thumb-sweep diagram is wrong, and UXmatters now carries an editor's note on the 2013 article calling it <em>"the well-known, but incorrect thumb-sweep chart."</em> Hoober's 2017 observational data:</p>
+<ul>
+<li><strong>75%</strong> of users touch the screen with one thumb only</li>
+<li><strong>fewer than 50%</strong> hold the phone one-handed</li>
+<li><strong>36%</strong> cradle; <strong>10%</strong> hold in one hand, tap with the other</li>
+<li>Minimum target <strong>7mm at screen centre</strong>, <strong>~12mm at the corners</strong></li>
+<li><strong>Carrying a bag</strong> degrades corner accuracy to <strong>over 30mm</strong> — the postpartum case exactly</li>
+<li>Henze: error rises sharply below 15mm; <strong>over 40% error under 8mm</strong></li>
+<li>Schildbach &amp; Rukzio: <strong>20mm targets solve almost all problems</strong></li>
+</ul>
+<p>Hoober's conclusion contradicts naïve thumb-zone advice: <strong>put primary clickables in the centre</strong>, secondaries top and bottom, and design targets <strong>20% larger</strong> than you think you need.</p>
+<p>NN/g's Aurora Harley wrote about this exact user and names <strong>Glow Baby</strong> as the failure case — a 6mm × &lt;1mm scrubber, <em>"It took about 10 tries"</em> — while praising its <strong>2.3cm-wide</strong> nursing-timer targets. The concept she names is <strong>view–tap asymmetry</strong>: what is comfortable to <em>see</em> is not what is comfortable to <em>tap</em>.</p>
+<p><strong>Resolution for home.</strong> The infant-app convention is large controls at the top; the one-handed evidence says centre. Split them: <strong>status display up top</strong> (supply banner, ring), <strong>actions in the centre and lower third</strong> (log food, check in), nothing interactive in the corners. 44pt is the iOS minimum, not the target — aim for <strong>20mm ≈ 56pt</strong> on the check-in taps.</p>
+<h3 id="62-logging-friction-the-specific-complaints">6.2 Logging friction — the specific complaints</h3>
+<p>Every one of these is a named MFP gap and a cheap differentiator:</p>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Verbatim</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Free-text portion entry</td>
+<td><em>"I wish you can choose the item and immediately write 1 cup or 100 g, 1 oz"</em></td>
+</tr>
+<tr>
+<td>Per-item favourites, distinct from recents</td>
+<td><em>"The ability to favorite individual items should be there… instead of having to scan the item again"</em></td>
+</tr>
+<tr>
+<td>Predictably sorted recents</td>
+<td><em>"the recent foods is not listed alphabetically"</em></td>
+</tr>
+<tr>
+<td>Editable quantity on a saved meal</td>
+<td><em>"sometimes I eat 2 eggs sometimes 4. Seems ridiculous to make that into two separate meals"</em></td>
+</tr>
+<tr>
+<td>No gratuitous confirm steps</td>
+<td><em>"when you go to login food now it asks you if you've already eaten the meal. Are you serious?"</em></td>
+</tr>
+<tr>
+<td>Barcode entry in a <strong>fixed</strong> location</td>
+<td><em>"Depending on which page you are on, the 'scan barcode' may be in a different place"</em></td>
+</tr>
+<tr>
+<td>Free barcode scan</td>
+<td>The dominant churn driver — MFP paywalled it Oct 2022 and reviewers name Lose It! and Cronometer as destinations by name</td>
+</tr>
+</tbody>
+</table>
+<p>And the one that matters most for your architecture, repeated across four years of reviews:</p>
+<blockquote>
+<p>"There are only two things we need to do. <strong>Log a weight for the day and quickly log food.</strong> … The face page has extraneous information when it should present the two most important things… <strong>Those should not be on separate pages.</strong>" — 3★, May 2026</p>
+<p>"<strong>You click about 8 times</strong>… to finally get to the place to enter my weight." — 2★</p>
+</blockquote>
+<p>Weigh-in and food entry belong on the same surface, both reachable one-thumb. And note the recurring bug class: <em>"today's update broke the ability to add today's weight. You tap on weight, and the little + in the top right corner no longer shows up."</em> <strong>The top-right "+" is the wrong affordance</strong> for this user, and it is fragile.</p>
+<h3 id="63-interruption-tolerance">6.3 Interruption tolerance</h3>
+<p>She will be interrupted mid-flow. Per §1.3 the cost is affective and the recovery window is ~15–20 seconds, which means the design goal is <strong>never losing state</strong>, not speed.</p>
+<p><strong>Nara Baby is the only app in the study with deliberate anti-interruption behaviour</strong> — it <em>"keeps your phone unlocked and awake"</em> during a feeding timer and lets you leave the timer window without losing it. Everyone else's story is a bug report, and the worst class is <strong>silent save failure</strong>:</p>
+<blockquote>
+<p>"or worse, you don't realize it didn't save and your data is now inaccurate."</p>
+</blockquote>
+<p><strong>Requirements:</strong></p>
+<ul>
+<li>Every multi-step flow (log, check-in, onboarding) persists after <strong>every</strong> step, not on submit.</li>
+<li>Returning after any interval resumes exactly where she left off, with a visible <em>"picking up where you left off."</em></li>
+<li>Saves are confirmed visibly. A silent failure in a supply-tracking app is credibility poison — it is precisely what killed LatchFit's ratings.</li>
+<li>Never a destructive control that can't be undone. Huckleberry's finish-feed button is <em>"now too easy to accidentally press (by myself or my little one) and you cannot reopen a feed."</em></li>
+</ul>
+<h3 id="64-streaks-make-them-forgiving-by-mechanism-not-by-tone">6.4 Streaks — make them forgiving by mechanism, not by tone</h3>
+<p>The brief says "streak display, gentle." Gentleness of copy is not enough; the mechanic itself has to forgive.</p>
+<p>Two award-winning apps converged independently on the same primitive:</p>
+<ul>
+<li><strong>Gentler Streak</strong>: <em>"Keep your streak alive by following your body's needs, even when it calls for rest days. When life happens—be it illness, injury, or vacation—adjust your status to reflect real life and skip feeling guilty."</em> The streak measures <strong>consistency of attention</strong>, not performance, and users can declare life states that pause evaluation without breaking the chain.</li>
+<li><strong>Oura Rest Mode</strong>: temporarily mutes the Activity Score and contributors when illness or life prevents meeting goals.</li>
+</ul>
+<p><strong>Build the equivalent:</strong> <em>baby is sick · I'm sick · cluster feeding · travelling · hospital.</em> Suspends floor-miss accounting, preserves the streak, and changes the copy. This is also the honest answer to the ED-risk problem (§10) — a streak that cannot be broken by circumstance cannot be used as a self-punishment instrument.</p>
+<h3 id="65-nudges-the-ethical-gate-and-the-shape">6.5 Nudges — the ethical gate and the shape</h3>
+<p>Gentler Streak's published rationale for their morning notification is the best statement of nudge ethics found anywhere in this research:</p>
+<blockquote>
+<p>"<strong>The benefit: the app pays attention so you don't have to, and speaks up when yesterday has something to tell you about today.</strong>"</p>
+</blockquote>
+<p>Adopt that as the literal gate: <strong>no nudge unless there is something specific in yesterday's data that bears on today.</strong> Never a scheduled nudge. This also protects the brief's max-one-push-per-day budget.</p>
+<p>For the shape of the full-screen moment, <strong>one sec</strong> is the most rigorously evidenced interrupt design in consumer software — PNAS 2023, CHI 2024, plus a Danish Competition and Consumer Authority field experiment. The user testimony explains why friction beats blocking:</p>
+<blockquote>
+<p>"Strict blockers never worked: I just turned them off. <strong>The forced pause is critical to be able to consciously make the choice</strong> though."</p>
+</blockquote>
+<p>Its paid feature that matters most is <strong>Healthy Alternatives</strong> — interrupt <em>and immediately offer the substitute</em>. Combined with Gentler Streak's "Go Gentler" pattern, where each recommendation is shown <strong>with a preview of how it moves your position on the gauge</strong>, the supply-protect nudge becomes:</p>
+<blockquote>
+<p>Brief breath animation → <em>"You're 550 below your floor."</em> → three tappable food cards, <strong>each showing how far it moves the ring</strong> as a ghosted arc extension → "Not now," always present.</p>
+</blockquote>
+<p>Never dismiss-only. Never a modal with a single OK.</p>
+<p><strong>Do not copy Opal's reward layer</strong> — a gem-collection ladder (First Gem, Determined, Driven, Committed, Balanced, Loyal, Soulful, Devoted, Unwavering Gem). A nursing mother at 3am does not want to earn an Unwavering Gem. It is a useful boundary marker for what "warm" excludes.</p>
+<hr />
+<h2 id="7-copy-and-tone">7. Copy and tone</h2>
+<p>The style guide's voice rules are firm and correct. Two additions from research.</p>
+<p><strong>The best tonal models in the category</strong>, verbatim:</p>
+<ul>
+<li>Bodily: <em>"Our cultural obsession with 'snapping back'… obscures the fact that what people really need to focus on after birth is recovery."</em> And on breastfeeding: <em>"it is anything but easy for the vast majority of people."</em></li>
+<li>Motherhood Center: <em>"a waterfall of 'shoulds' and 'supposed to's' that cause many women to feel guilty, ashamed, and like a failure… motherhood is messy. … we make space for it all."</em></li>
+<li>Peanut's <strong>Renaming Revolution</strong> — a genuinely good idea worth borrowing structurally: <em>geriatric pregnancy → 35+ pregnancy; inhospitable womb → uterine lining challenges; failure to progress → slowed labor.</em> You have an equivalent list to write: <em>low supply, failure to thrive, insufficient glandular tissue, non-compliant.</em></li>
+<li>MacroFactor, on trend weight: <em>"Your weight trend is the signal in all of that noise."</em> And <em>"it can help people maintain a bit more peace of mind."</em></li>
+</ul>
+<p><strong>Bodily's calm-declarative register is the safest floor.</strong> Frida's jokey register is a documented liability.</p>
+<p><strong>On the disordered-eating question at onboarding.</strong> The EPDS-US revision (Moyer et al., <em>J Women's Health</em> 32(10):1080–1085, 2023) is the model for softening a screener without breaking it: drop "unnecessarily" and "for no good reason," change "have been" → "have felt," rewrite the sleep item as <em>"difficulty sleeping even when I have the opportunity to sleep"</em> — and <strong>the authors themselves call it a "check-in."</strong></p>
+<p>Falsification is item-specific and real. One documented case scored an honest 25 and a written 8 — <em>"I lied through my teeth… they took away my baby"</em> — but <strong>did not falsify the self-harm item</strong>. Design accordingly: the gentle question should be the one she has no incentive to lie about.</p>
+<p>Category patterns worth copying: Motherhood Center's "How are you feeling?" is a card carousel with <strong>no score and no submit button</strong>. Canopie never uses the word "screening" — it says <em>"Share how you're feeling."</em> Momwell refuses depression screening entirely and uses only the word <strong>burnout</strong>. <strong>Ovia's escalation copy is stale</strong> — it still references the pre-988 lifeline. Do not copy it, and audit your own crisis resources against current numbers before launch.</p>
+<hr />
+<h2 id="8-novel-concepts">8. Novel concepts</h2>
+<p>Split as requested: a conventional core that will not surprise anyone, and a set of swings.</p>
+<h3 id="81-the-safe-core">8.1 The safe core</h3>
+<p>These are proven and should not be argued about.</p>
+<ol>
+<li><strong>Number-in-centre, arc-on-circumference, filling.</strong> The pattern users explicitly praise on MFP's Watch app.</li>
+<li><strong>Trend weight with MacroFactor's exact pedagogy</strong> — pale raw line, bold trend line, one chart. Plus their three rhetorical devices: a worked numeric example, the "weight is a range not a number" frame, and a named FAQ entry for <em>"Should I still log my weight if I'm bloated?"</em> Postpartum noise is worse than the general case — lochia, resolving edema, engorgement, hydration swings, pre/post-feed differences. Say so explicitly and widen the smoothing constant accordingly.</li>
+<li><strong>Meal-grouped logging, free barcode scan, per-item favourites, free-text portions.</strong> §6.2.</li>
+<li><strong>Weigh-in and food logging on one surface.</strong> §6.2.</li>
+<li><strong>Annual-first paywall at the plan-activation moment</strong>, no countdown timers, no fake discounts. Already in the brief; the review corpus confirms every predatory pattern is resented.</li>
+</ol>
+<h3 id="82-the-swings">8.2 The swings</h3>
+<p>Ordered by conviction. Each carries an honest build-risk note.</p>
+<hr />
+<p><strong>A. "Still to eat today" replaces "calories remaining."</strong> <em>(Highest conviction. Low build risk. Tests trivially.)</em></p>
+<p>§2.4. Subtract the floor out of the headline number. It counts down to zero and stops; zero is the win. Ship it on the widget and Lock Screen first even if the in-app ring stays conventional — that's a cheap A/B and the widget is where the glance actually happens.</p>
+<p>The deeper move: this kills the budget frame entirely. There is no number to overspend.</p>
+<hr />
+<p><strong>B. Floats and sinkers on the trend chart.</strong> <em>(High conviction. Medium build risk. Genuinely novel in this category.)</em></p>
+<p>From <em>The Hacker's Diet</em>, and it is the best reframe device found in the entire research corpus. Plot the trend line, plot each day's raw reading as a diamond, and <strong>draw a short connector from each diamond to the trend line.</strong> Walker's framing:</p>
+<blockquote>
+<p>"Think of the trend as a fishing line in the water. Daily weights that fall below it are <strong>sinkers</strong>, pulling it down… When the trend is rising, most daily weights will be above the trend line: <strong>floats</strong>, tethered to the line, pulling it up."</p>
+</blockquote>
+<p>This converts a bad day from <em>evidence of failure</em> into <em>a force acting on the truth</em> — and the connector lines make the mechanism visible without a word of copy. Invert the polarity for intake: a low-intake day is a sinker pulling her protection trend down.</p>
+<p>Walker's supporting numbers are worth building the copy around: during a diet that worked exactly as planned, the raw scale produced constant despair, but across 51 days the trend went <strong>down 37 days, unchanged 10, up only 4.</strong> That three-row table is itself a good UI element.</p>
+<p>His warmth device is also worth stealing: translate an abstract slope into food. <em>"An excess of 66 calories a day, comparable to a single Oreo cookie, half a tablespoon of mayonnaise, or 5 peanuts roasted in the shell."</em> Making the correction feel trivially achievable is the whole game.</p>
+<hr />
+<p><strong>C. The floor line moves, visibly.</strong> <em>(High conviction. Low build risk. Strong differentiation.)</em></p>
+<p>Gentler Streak moves its target range with menstrual phase. Your equivalent: the floor <strong>rises during cluster feeding, growth spurts, and exclusive pumping</strong>, and falls through weaning. Do not change it silently — <strong>animate the floor line moving</strong>, with one sentence of reason.</p>
+<p>This is the single clearest way to prove the floor is a physiological fact and not a judgment. It also directly answers the loudest MFP complaint: <em>"There was no place I could add a BMR so the app would take that into account."</em></p>
+<p>Corollary constraint on the weekly-budget mechanic: redistribution must be <strong>asymmetric</strong>. An over-day may borrow from later days; an under-day must <strong>never</strong> be banked as credit. Undershooting the floor is a supply-risk event, not savings.</p>
+<hr />
+<p><strong>D. "Days protected" as the hero retrospective.</strong> <em>(High conviction. Low build risk.)</em></p>
+<p>Dexcom's Time in Range, ported. <strong>"You protected your supply on 26 of the last 30 days."</strong> Rendered as a stacked horizontal bar: days above floor / slightly under / well under.</p>
+<p>Robust to a single bad day, matches the biology, recognised by clinicians, and — importantly — it is a weekly headline metric that <strong>is not a weight</strong>. The brief already wants progress-beyond-the-scale; this is the concrete form of it.</p>
+<hr />
+<p><strong>E. A character at the centre of the ring.</strong> <em>(Medium conviction. Medium build risk. Real tonal payoff, real tonal danger.)</em></p>
+<p>Three separate award-recognised wellbeing apps put a character at the centre of the metric: <strong>Harvee</strong> (2026 ADA Social Impact finalist — <em>"a friendly little guy who sits at the center of the experience and serves as an avatar for a person's state"</em>), <strong>Gentler Streak</strong> (the Yorhart heart mascot, which changes for the "State of Extra Recovery"), and <strong>Finch</strong>.</p>
+<p>The mechanism is real: <strong>the character absorbs the emotional valence that would otherwise attach to the number.</strong> The app can communicate "you're low" through a face without the user reading it as <em>you failed.</em> For a product whose central risk is that a number makes an exhausted woman feel judged, this is a serious tool.</p>
+<p>The danger is equally real: your style guide bans cartoon babies and pastel-baby aesthetics for good reasons, and a cute mascot in a postpartum weight app could read as condescending — the exact "infantilising women's health design" failure §4.3 warns about. If you try this, the character must be <strong>abstract and adult</strong> — Bodily's organic-shape vocabulary rather than anything with eyes. Prototype it; do not commit to it.</p>
+<hr />
+<p><strong>F. The percentile ribbon instead of a single line.</strong> <em>(Medium conviction. Higher build risk. Best long-term idea.)</em></p>
+<p>Dexcom's AGP superimposes 14 days onto one 24-hour frame with five percentile curves: a heavy median inside a dark 25–75th ribbon inside a light 5–95th ribbon.</p>
+<p>Ported: <em>"here is your typical day, and here is how much you vary."</em> The ribbon <strong>narrows as she becomes more consistent</strong> — which is a progress story that does not require the weight to move at all. For a user whose intake variance is largely outside her control and whose scale weight is postpartum noise, this may be the most honest progress metric available.</p>
+<p>Build risk is real: it needs enough data to be meaningful, so it can't be the day-one Trends screen. Ship it as the 30-day view, or as a v1.5 unlock.</p>
+<hr />
+<p><strong>G. Palette on a clock.</strong> <em>(Medium conviction. Low build risk. Cheap distinctiveness.)</em></p>
+<p>§4.4. Tide Guide won an ADA for exactly this. It solves a real legibility problem, it differentiates a palette that is otherwise category-generic, and it is a genuinely lovely detail for a product whose defining use case is a specific hour of the night.</p>
+<hr />
+<p><strong>H. Log the food, get the arc preview.</strong> <em>(Medium conviction. Low build risk.)</em></p>
+<p>Gentler Streak shows each recommendation <strong>with a preview of how it will move your position on the Activity Path.</strong> On the below-floor nudge, render each suggested food as a <strong>ghosted arc extension</strong> on the ring — she sees the peanut butter toast close the gap before she taps it.</p>
+<p>This is the "Healthy Alternatives" mechanic (§6.5) made visual, and it is the difference between an alert and a piece of help.</p>
+<hr />
+<p><strong>I. An explicit "we don't know yet" state.</strong> <em>(Underrated. Trivial build risk.)</em></p>
+<p>Natural Cycles' brown day — <em>"more data is needed"</em> — is the <strong>only explicit insufficient-data colour found in any app across the whole study</strong>, and their engine defaults to the safe state when it lacks information.</p>
+<p>You need this and currently don't have it. Two missed check-ins should not silently render as "steady." It also expresses uncertainty as <em>duration</em> rather than probability, which is far more legible: <em>"a few more days of check-ins and I'll be able to say."</em></p>
+<hr />
+<p><strong>J. Numbers-off mode.</strong> <em>(Should probably be core, not a swing.)</em></p>
+<p>An actual MFP user request, 5★, 2024:</p>
+<blockquote>
+<p>"Being able to check a bubble that indicates if you stopped eating at enough and ate when hungry to help with intuitive eating. <strong>This view could also have an option to hide calories and macros.</strong>"</p>
+</blockquote>
+<p>The adapted mode in the brief already goes most of the way. Making "hide the numbers" a first-class toggle available to <em>everyone</em> — not just the adapted-mode cohort — is cheap, is user-requested, and is the strongest single signal that this app is not a diet app.</p>
+<hr />
+<h2 id="9-the-do-not-list">9. The do-not list</h2>
+<p>Consolidated anti-patterns, all evidence-backed.</p>
+<p><strong>From the ED literature.</strong> Three findings that should shape v1 scope:</p>
+<ul>
+<li><strong>Levinson, Fewell &amp; Brosof (2017)</strong>, <em>Eating Behaviors</em> — clinical sample, n=105 with diagnosed eating disorders. ~75% had used MyFitnessPal; of those, <strong>73% said it contributed at least somewhat to their eating disorder, 30% "very much."</strong></li>
+<li><strong>Simpson &amp; Mazzeo (2017)</strong>, n=493 — <strong>fitness tracking, not calorie tracking, was the unique predictor</strong> of ED symptomatology, attributed to appearance-motivated exercise and the absence of rest days or activity ceilings.</li>
+<li><strong>Plateau et al.</strong>, <em>BJPsych Open</em> — qualitative account of how these apps entrench ED behaviours.</li>
+</ul>
+<p>Therefore: <strong>no exercise credits, ever.</strong> No "you burned it, you can eat it." And Simpson &amp; Mazzeo argues directly against adding step or workout tracking to v1 at all — which the brief already excludes. Keep it excluded.</p>
+<p><strong>From the review corpora:</strong></p>
+<ul>
+<li>No interstitial ads. Beyond the obvious: <em>"the images for the weird ads are so gross it makes me stop eating"</em> — from a user logging while eating, which is your 3am user exactly.</li>
+<li>No condescending coaching voice. <em>"the same as ChatGPT but more condescending… told her sleep is 'junk'… I cancelled immediately."</em></li>
+<li>No AI advice that can be wrong about the baby. One app was <em>"repeatedly telling me I am overfeeding my baby"</em> using the wrong age.</li>
+<li>No forced arithmetic. <em>"how many minutes is .4 hours?"</em></li>
+<li>No tracking-induced anxiety. <em>"After a week of use I realized I was paying less attention to my child, more anxious, and deeply unhappy."</em> This is the deepest risk in the category and the reason numbers-off mode matters.</li>
+<li>No primary buttons at the top. Glow Baby is the named failure case in NN/g's write-up.</li>
+<li>No top-right "+" as the main entry point.</li>
+<li>No hue-only state encoding. §4.5.</li>
+<li>No timers without caps — or better, no timers. §3.3.</li>
+<li>No silent save failures. §6.3.</li>
+</ul>
+<hr />
+<h2 id="10-claude-code-design-toolchain">10. Claude Code design toolchain</h2>
+<p>The headline: <strong>most of the "Claude Code design tooling" ecosystem is web/React/Tailwind-shaped and irrelevant to a SwiftUI app.</strong> shadcn MCP, 21st.dev Magic, superdesign, Playwright visual QA — all assume a DOM. The real iOS stack is smaller and better.</p>
+<h3 id="101-install-these">10.1 Install these</h3>
+<pre><code class="language-bash"># Figma MCP — includes the figma-swiftui skill
+claude plugin install figma@claude-plugins-official
+
+# Anthropic's frontend-design skill
+/plugin install frontend-design@claude-plugins-official
+
+# The SwiftUI build + simulator + screenshot loop
+brew tap getsentry/xcodebuildmcp &amp;&amp; brew install xcodebuildmcp
+xcodebuildmcp init
+claude mcp add XcodeBuildMCP -s user -- npx -y xcodebuildmcp@latest mcp
+
+# Useful prompt-library skills (brief / IA / tokens only)
+npx skills add julianoczkowski/designer-skills
+</code></pre>
+<p>Plus: <strong>upgrade to Xcode 26.3+</strong>, which ships a built-in MCP exposing 20 Xcode capabilities including <strong>rendering SwiftUI Previews so the agent can see them without a full build/install cycle</strong>.</p>
+<h3 id="102-the-figma-swiftui-skill-is-the-find">10.2 The <code>figma-swiftui</code> skill is the find</h3>
+<p>Figma ships a dedicated bidirectional SwiftUI skill (<code>github.com/figma/mcp-server-guide</code>, <code>skills/figma-swiftui/SKILL.md</code>). Its load-bearing rules:</p>
+<ul>
+<li>Pass <code>clientLanguages: "swift"</code>, <code>clientFrameworks: "swiftui"</code> to <code>get_design_context</code> or you get React + Tailwind back.</li>
+<li><em>"The React+Tailwind in <code>get_design_context</code> output is a structural reference, not a literal source… </em><em>the screenshot is the source of truth in both directions.</em><em>"</em> This is why naïve Figma-to-code produces absolute-positioned garbage.</li>
+<li>iOS HIG semantic colours map as <strong>tokens, not hex</strong>: <code>var(--backgrounds/primary)</code> → <code>Color(.systemBackground)</code>.</li>
+<li>SF Symbols round-trip <strong>by name, never codepoint</strong>.</li>
+<li>Pattern recognition over literal nodes: large title + back chevron → <code>NavigationStack</code>; bottom icon+label row → <code>TabView</code>; repeating same-height rows → <code>List</code>.</li>
+</ul>
+<p>Use <code>get_metadata</code> first on large frames to avoid blowing context, then <code>get_design_context</code> + <code>get_screenshot</code> on the specific node.</p>
+<h3 id="103-the-code-to-design-direction-is-the-underrated-half">10.3 The code-to-design direction is the underrated half</h3>
+<p>You have no designer. So don't start in Figma — build 2–3 SwiftUI screens in code, then:</p>
+<blockquote>
+<p>"Mirror my SwiftUI design system in Figma: create a new file, then push the views in <code>Sources/DesignSystem/</code> as a component library with variables for colour and spacing."</p>
+</blockquote>
+<p><code>figma-generate-library</code> builds a Figma design system <strong>from your code</strong> in reviewed phases (Discovery → Foundations → File structure → Components with variants and screenshot validation → QA). You end up with a real Figma library generated from your actual code, which you can restyle visually and pull back down. That inverts the usual dependency, which is correct when you're solo.</p>
+<p><code>use_figma</code> executes JavaScript against the Figma Plugin API, so it can do anything Figma can. Free during beta; will become usage-based. Requires a Full or Dev seat. <strong>Skip Code Connect</strong> — it's Organization/Enterprise only.</p>
+<h3 id="104-the-loop-that-actually-produces-good-ui">10.4 The loop that actually produces good UI</h3>
+<p>This is where the leverage is. XcodeBuildMCP (Sentry-maintained, 6.3k stars, ~82 tools) gives you <code>snapshot_ui</code> for running-simulator screenshots and bundles <strong>AXe</strong>, which drives the simulator through Accessibility APIs using deterministic <code>accessibilityIdentifier</code> targeting rather than pixel guessing.</p>
+<blockquote>
+<p>"Build <code>SupplyBannerView</code>, run it on the iPhone 17 simulator, screenshot it, then critique your own screenshot against <code>.claude/skills/design-system/SKILL.md</code> — check contrast ratios, tap-target size in mm, type scale, Dynamic Type at AX5, and legibility in the 3am palette at 20% brightness. Fix what fails and screenshot again. Repeat until it passes."</p>
+</blockquote>
+<p>Two things make this work:</p>
+<ol>
+<li><strong>Critique against a written spec</strong>, never "does this look good" — otherwise it rubber-stamps its own output.</li>
+<li>Use <strong>Xcode previews for tight per-component iteration</strong> and <code>snapshot_ui</code> for whole-screen and flow verification.</li>
+</ol>
+<p>Add one-handed operation and the §4.5 colour-redundancy table to the checklist. Your users are holding a baby.</p>
+<h3 id="105-encode-the-design-system-so-it-cant-drift">10.5 Encode the design system so it can't drift</h3>
+<p>Three layers:</p>
+<ol>
+<li><strong><code>CLAUDE.md</code></strong> — always-on, small: fonts, colour discipline, forbidden patterns.</li>
+<li><strong><code>.claude/skills/design-system/SKILL.md</code></strong> — on-demand: the full token table, component inventory, the anti-pattern list from §9, and SwiftUI conventions (semantic colours not hex, Dynamic Type, SF Symbols by name, 56pt tap targets on check-in).</li>
+<li><strong><code>DesignTokens.swift</code></strong> — a single source-of-truth enum. Then the rule in the skill is: <em>never write a literal hex, spacing value, or font size; only reference <code>DesignTokens</code>.</em> That makes drift mechanically detectable — grep the view layer for hex literals.</li>
+</ol>
+<p>Steal designer-skills' <strong>"Respect Existing Code"</strong> principle: every skill that touches the codebase runs a detection checklist first (token files, theme configs, component dirs) so the agent doesn't invent a fourth green.</p>
+<h3 id="106-getting-non-generic-visual-output-from-claude">10.6 Getting non-generic visual output from Claude</h3>
+<p>Anthropic's published guidance (<code>claude.com/blog/improving-frontend-design-through-skills</code>, and the <code>prompting_for_frontend_aesthetics</code> cookbook) diagnoses the problem as distributional convergence: <em>"Safe design choices — those that work universally and offend no one — dominate web training data. Without direction, Claude samples from this high-probability center."</em></p>
+<p>Three techniques: guide specific dimensions individually (typography, colour, motion, backgrounds); reference design inspirations without over-prescribing; and <strong>explicitly call out the defaults to avoid</strong>.</p>
+<p>The subtlest and most useful warning is about <strong>second-order convergence</strong>: telling Claude to avoid Inter just moves it to a different local maximum (their example: Space Grotesk). Name the specific second choices you've already seen it produce.</p>
+<p><strong>Two caveats for this project.</strong> The cookbook's aesthetics block is CSS-specific — rewrite it in SwiftUI terms. And it optimises for <em>distinctive and surprising</em>, which is not what you want for a health app used by exhausted people at 3am. Take the anti-default lists and the typographic discipline; discard "take one real aesthetic risk."</p>
+<h3 id="107-skip-these">10.7 Skip these</h3>
+<ul>
+<li><strong>21st.dev Magic</strong> — unmaintained (no commits in 3 months as of Feb 2026), unresolved prompt-injection advisory, React-only.</li>
+<li><strong>superdesign</strong> — thin client for a paid hosted service; its model requires hand-maintaining an HTML replica of your iOS app.</li>
+<li><strong>shadcn MCP</strong> — React-only; shadcn.io's is $19/mo.</li>
+<li><strong>Figma Code Connect</strong> — Enterprise-only.</li>
+<li><strong>The "3,000 skills" mega-marketplaces</strong> — volume plays, unvetted.</li>
+</ul>
+<p>Add <strong>Chrome DevTools MCP</strong> only for the marketing site.</p>
+<hr />
+<h2 id="11-what-to-validate-next">11. What to validate next</h2>
+<p>Design-side questions the research could not settle. Most fold into the 20 discovery interviews already planned.</p>
+<ol>
+<li><strong>Does the "Still to eat today" framing land, or does it feel like a chore?</strong> The strongest idea here is also the least tested in this domain. Two static mockups in the interviews would settle it.</li>
+<li><strong>Does a self-referential supply statement feel useful, or does it feel like the app is dodging?</strong> §1.1 constrains the copy hard. Test whether <em>"steady vs. your own last 7 days"</em> satisfies the anxiety that drives the feature at all.</li>
+<li><strong>Character or no character?</strong> §8.2-E. Genuine tonal upside, genuine condescension risk.</li>
+<li><strong>Is sage-on-cream distinctive enough?</strong> Show the palette next to Bodily, Expectful, and Hey Jane and watch whether anyone can tell them apart.</li>
+<li><strong>Pixel-level competitor teardown remains open.</strong> No screenshots were visually read in this research — all layout description is inferred from text, review descriptions, and screenshot filenames. The fastest close is Chrome MCP against App Store listings, or installing the top five on a device.</li>
+<li><strong>Pump Coach's actual UI.</strong> Three ratings, no review corpus, and <code>thebreastfeedingmama.com/pump-coach/</code> returns empty. Worth installing.</li>
+<li><strong>Does a low-precision input mode actually satisfy her?</strong> §0A.2 shows people falsifying logs to reduce anxiety, which argues for <em>roughly enough / not sure / definitely not enough</em>. But it is untested whether that feels supportive or feels like the app isn't taking her seriously. Two mockups in the interviews.</li>
+<li><strong>The partner question.</strong> Shared state with a spouse is the single most-cited reason for keeping any baby app past week six, and you have no answer to it. Decide deliberately whether to cede that ground — it may be the difference between month-2 and month-8 retention.</li>
+<li><strong>The gaining-weight cohort.</strong> How large is it really, and what does a non-failure state look like for them? Recruit at least three interviewees who gained while nursing; they will not volunteer.</li>
+</ol>
+<hr />
+<h2 id="sources">Sources</h2>
+<p><strong>Nutrition / calorie trackers</strong>
+MyFitnessPal App Store listing &amp; customer-review RSS (id 341232718, retrieved 2026-08-17) · MFP Help Center, "How does MyFitnessPal calculate my initial goals" · MacroFactor Help Center: <a href="https://help.macrofactorapp.com/en/articles/21-weight-trend">Weight Trend</a>, <a href="https://help.macrofactorapp.com/en/articles/22-get-to-know-your-dashboard">Dashboard</a>, <a href="https://help.macrofactorapp.com/en/articles/138-what-are-the-micronutrient-floor-target-and-ceiling">Micronutrient floor/target/ceiling</a>, <a href="https://help.macrofactorapp.com/en/articles/34-what-are-the-different-program-options-in-coached-mode">Coached-mode program options</a>, <a href="https://help.macrofactorapp.com/en/articles/92-weekly-budget">Weekly budget</a> · Cronometer, Lose It!, Noom App Store listings</p>
+<p><strong>Eating-disorder literature</strong>
+Levinson, Fewell &amp; Brosof (2017), <em>Eating Behaviors</em> — <a href="https://pubmed.ncbi.nlm.nih.gov/28843591/">PubMed 28843591</a> · Simpson &amp; Mazzeo (2017), <em>Eating Behaviors</em> — <a href="https://pubmed.ncbi.nlm.nih.gov/28214452/">PubMed 28214452</a> · Plateau et al., <em>BJPsych Open</em></p>
+<p><strong>Lactation &amp; clinical</strong>
+<a href="https://kellymom.com/nutrition/mothers-diet/mom-weightloss/">KellyMom — weight loss while breastfeeding</a> · <a href="https://llli.org/breastfeeding-info/weight-loss-mothers/">La Leche League International</a> · <a href="https://www.infantrisk.com/content/weight-loss-lactation">InfantRisk Center</a> · Academy of Nutrition and Dietetics · Dienelt et al., <em>Health Informatics Journal</em> (2020)</p>
+<p><strong>Maternal / baby apps</strong>
+App Store listings and customer-review RSS for Huckleberry (1169136078), Nara Baby (1444639029), Baby Tracker (779656557), Baby Feed Timer (395357581), Baby Daybook (1446283219), Sprout Baby (551448817), Glow Baby (1077177456), Feed Baby (868611155), Ovia Parenting (1106614359), Pump Coach (6765497176), Pump Log (814112299), LactApp (1040787494) · Live CSS harvests of bodily.com, expectful.com, canopie.app, motherhoodcenter.com, heyjane.com, mahmee.com, fridamom.com, peanut-app.io, helloclue.com (17 Aug 2026)</p>
+<p><strong>Reddit field evidence (§0A)</strong>
+~35 threads read in full with comments, Aug 2026, across r/breastfeeding, r/beyondthebump, r/NewParents, r/ExclusivelyPumping, r/Mommit, r/loseit, r/1200isplenty, r/Myfitnesspal, r/workingmoms. Key threads: <a href="https://www.reddit.com/r/breastfeeding/comments/g4a2o9/">Pumping is not an indicator of supply!!!</a> (170↑) · <a href="https://www.reddit.com/r/breastfeeding/comments/1n59rsl/">1300-calorie dietitian plan</a> (66↑, 157c) · <a href="https://www.reddit.com/r/breastfeeding/comments/1c6fg1y/">Petition to have breastfeeding included on fitness apps</a> (37↑) · <a href="https://www.reddit.com/r/Myfitnesspal/comments/1uh0tyi/">MFP breastfeeding entry removed</a> · <a href="https://www.reddit.com/r/breastfeeding/comments/1uidyge/">Tracking-app fatigue</a> (180↑, 252↑ top comment) · <a href="https://www.reddit.com/r/NewParents/comments/1m877fr/">Do I need a tracking app</a> (587c) · <a href="https://www.reddit.com/r/breastfeeding/comments/1mgmwao/">Deficit and supply</a> · <a href="https://www.reddit.com/r/ExclusivelyPumping/comments/1rewrd7/">Gaining weight while pumping</a> (111c) · <a href="https://www.reddit.com/r/beyondthebump/comments/101qwdf/">Postpartum body image</a> (514↑) · <a href="https://www.reddit.com/r/1200isplenty/comments/u4xdnh/">Breastfeeding in r/1200isplenty</a> · <a href="https://www.reddit.com/r/beyondthebump/comments/l1crmr/">Regret spending in pregnancy</a> (1917↑, 534c)</p>
+<p><strong>Design philosophy &amp; rebrands</strong>
+Marta Pucci and Ida Tin on Clue's identity · Mother Design on Bodily (ADC Bronze Cube 2020) · AIGA Eye on Design, femtech branding waves · Pili Laviolette, Random Pattern Studio, on the pink/clinical/empowerment traps · Michelle Kennedy (Peanut)</p>
+<p><strong>Cross-domain</strong>
+<a href="https://gentlerstories.com/gentlerstreak">Gentler Stories</a> · <a href="https://ouraring.com/blog/readiness-score/">Oura Readiness Score</a> · <a href="https://developer.apple.com/design/awards/">Apple Design Awards</a> · <a href="https://www.dexcom.com/en-us/faqs/what-is-time-in-range">Dexcom Time in Range</a> · <a href="https://agpreport.org/agp/about">AGP Report</a> · <a href="https://www.fourmilab.ch/hackdiet/e4/signalnoise.html">The Hacker's Diet, "Signal and Noise"</a> · Happy Scale review corpus (532430574) · <a href="https://one-sec.app/research/">one sec research</a>; Grüning, Riedel &amp; Lorenz-Spreen, <em>PNAS</em> 120(8) e2213114120 (2023); Haliburton et al., <em>CHI '24</em> · Simple bank coverage (The Financial Brand, TechCrunch, PCWorld)</p>
+<p><strong>Interruption &amp; ergonomics</strong>
+Mark, Gonzalez &amp; Harris (2005); Mark, Gudith &amp; Klocke (2008); Monk et al. (2008) · Hoober, UXmatters (2017) · Harley, Nielsen Norman Group · Henze et al.; Schildbach &amp; Rukzio</p>
+<p><strong>Night light</strong>
+Chang et al. (2015) · Nagare et al. (2019) · Duraccio et al. (2021) · Phillips et al. (2019)</p>
+<p><strong>Tooling</strong>
+<a href="https://github.com/anthropics/skills">Anthropic skills</a> · <a href="https://developers.figma.com/docs/figma-mcp-server/tools-and-prompts/">Figma MCP server docs</a> · <a href="https://github.com/figma/mcp-server-guide">figma/mcp-server-guide</a> · <a href="https://github.com/getsentry/XcodeBuildMCP">XcodeBuildMCP</a> · <a href="https://claude.com/blog/improving-frontend-design-through-skills">Anthropic — Improving frontend design through Skills</a> · <a href="https://github.com/anthropics/claude-cookbooks/blob/main/coding/prompting_for_frontend_aesthetics.ipynb">claude-cookbooks — prompting for frontend aesthetics</a> · <a href="https://www.anthropic.com/news/apple-xcode-claude-agent-sdk">Anthropic × Apple Xcode</a></p></article></div><div class="pager"><a href="04_Style_Guide.html">← Style Guide</a><a href="01_Conversation_Log.html">Conversation Log →</a></div></div><footer><div class="wrap f-in">
+  <span>Source document · rendered from the repository markdown</span>
+  <span>Working material · share the link deliberately</span>
+</div></footer></body></html>
