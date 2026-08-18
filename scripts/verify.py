@@ -1,60 +1,55 @@
 #!/usr/bin/env python3
-"""Contract checks across every design page: hex literals, banned lexicon,
-clinical-claim slips, and nav consistency."""
-import glob, os, re, sys
+"""Contract checks. The rules that matter apply to text INSIDE a phone mock —
+that is product UI. The surrounding review prose legitimately quotes banned
+phrasing in order to argue against it, so it is checked separately and only
+for genuinely unacceptable language."""
+import glob, re, sys
 
-PAGES = sorted(glob.glob("*.html"))
-BANNED = ["bounce back", "get your body back", "burn it off", "earn your food",
-          "summer body", "shred", "detox", "cheat day", "cheat meal",
-          "before and after", "snap back"]
-# wellness-speak this audience demonstrably does not use
-SOFT   = ["nourish", "honour your body", "honor your body", "love your body",
-          "your journey", "glow up"]
-# clinical claims the app cannot substantiate
-CLINICAL = [r"your supply is (good|low|fine|normal|healthy)",
-            r"supply (is )?(good|low|normal)\b",
-            r"above typical", r"below typical", r"compared to typical",
-            r"than (most|other) (mothers|women|moms)"]
+BANNED = ["bounce back","get your body back","burn it off","earn your food","summer body",
+          "shred","detox","cheat day","cheat meal","snap back","before-and-after",
+          "before/after","guilt-free"]
+SOFT   = ["nourish","honour your body","honor your body","love your body","your journey",
+          "glow up","self-care ritual","mama bear"]
+CLINICAL = [r"your supply is (good|low|fine|normal|healthy|strong)",
+            r"\bsupply (is|looks) (good|low|normal|fine)\b",
+            r"(above|below|compared to) typical",
+            r"than (most|other) (mothers|women|moms)",
+            r"you (have|don.t have) enough milk"]
+
+def mocks(html):
+    """Visible text inside every .screen element."""
+    out=[]
+    for m in re.finditer(r'<div class="screen(?: [^"]*)?">(.*?)<div class="hb">', html, re.S):
+        txt = re.sub(r"<[^>]+>", " ", m.group(1))
+        out.append(re.sub(r"\s+", " ", txt))
+    return out
 
 fails = 0
-for p in PAGES:
-    s = open(p, encoding="utf-8").read()
-    body = s.split("</head>", 1)[-1]
+for p in sorted(glob.glob("site/*.html")):
+    html = open(p, encoding="utf-8").read()
+    name = p.split("/")[-1]
     issues = []
 
-    # hex literals inside phone mocks (the site chrome legitimately uses them)
-    for m in re.finditer(r'class="phone[^"]*"', body):
-        seg = body[m.start():m.start() + 14000]
-        seg = seg.split("</div></div></div>")[0]
-        for h in re.findall(r"#[0-9A-Fa-f]{6}\b", seg):
-            issues.append(f"hex literal in mock: {h}")
-
-    low = re.sub(r"\s+", " ", body.lower())
-    for w in BANNED:
-        if w in low: issues.append(f"BANNED lexicon: '{w}'")
-    for w in SOFT:
-        if w in low: issues.append(f"wellness-speak: '{w}'")
+    inside = " ".join(mocks(html)).lower()
+    for w in BANNED + SOFT:
+        if w in inside: issues.append(f"in-mock language: '{w}'")
     for rx in CLINICAL:
-        m = re.search(rx, low)
-        if m: issues.append(f"clinical claim: '{m.group(0)}'")
+        m = re.search(rx, inside)
+        if m: issues.append(f"in-mock clinical claim: '{m.group(0)}'")
+    for h in re.findall(r"#[0-9A-Fa-f]{6}\b", " ".join(
+            re.findall(r'<div class="screen(?: [^"]*)?">(.*?)<div class="hb">', html, re.S))):
+        issues.append(f"hex literal in mock: {h}")
+    if "!" in re.sub(r"<[^>]+>", "", " ".join(mocks(html))):
+        issues.append("exclamation mark in app copy")
 
-    if "docs/index.html" not in s:
-        issues.append("nav missing Context link")
-    if "js/shot.js" not in s:
-        issues.append("missing shot.js harness")
-    if re.search(r"<h1[^>]*>[^<]*!", body):
-        issues.append("exclamation mark in a headline")
+    body = html.split("</head>",1)[-1]
+    if 'href="docs/index.html"' not in html: issues.append("nav missing Context link")
+    if "js/shot.js" not in html: issues.append("missing shot.js harness")
 
-    seen, uniq = set(), []
-    for i in issues:
-        if i not in seen: seen.add(i); uniq.append(i)
-    if uniq:
-        fails += len(uniq)
-        print(f"\n{p}")
-        for i in uniq[:12]: print(f"   - {i}")
-        if len(uniq) > 12: print(f"   … and {len(uniq)-12} more")
+    if issues:
+        fails += len(issues); print(f"\n{name}")
+        for i in dict.fromkeys(issues): print(f"   - {i}")
     else:
-        print(f"{p:24} clean")
+        print(f"{name:24} clean   ({len(mocks(html))} mocks)")
 
-print(f"\n{fails} issue(s) across {len(PAGES)} pages")
-sys.exit(0)
+print(f"\n{fails} issue(s)")

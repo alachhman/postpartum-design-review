@@ -139,6 +139,35 @@ Pricing: **$79.99/yr** annual-first, **$12.99/mo** beneath, 7-day trial, card re
 
 ---
 
+---
+
+## App copy is not deck copy — read this twice
+
+The words inside a phone mock are **product UI**. The app never explains its own
+philosophy, never names its own mechanics, and never sells itself to the user.
+The rationale belongs in the `<p class="caption">` under the phone. That is what
+captions are for.
+
+Banned inside a mock, and these are real examples that had to be rewritten:
+
+| Don't write | Write |
+|---|---|
+| "Counts to zero and stops. Nothing here to overspend." | "That gets you to 1,800." |
+| "A win condition that doesn't need the scale to move." | *(nothing — delete it)* |
+| "Not a verdict on your supply — a change in what you've been reporting." | "Your last two check-ins were lower than usual." |
+| "The screen dims with the hour. This is dusk." | "Theo's down. Nothing urgent here." |
+| "Pale arc: where today is heading on your usual pattern." | "On track for about 1,880 today." |
+| "Interrupt and immediately offer the substitute" | *(that's a caption, never a screen)* |
+
+The test: **if a sentence would fit in a pitch deck or a design review, it does not
+go on the screen.** Read every string as a woman who has slept four hours and is
+holding a baby. She needs the fact, the number, and what to do next. She does not
+need to be told what the design is doing or why it is clever.
+
+Plain and specific beats warm and writerly. "You've been under your floor two days
+running" is better than "Two short days at the end of a good month." Short
+sentences. Real words. No em-dash aphorisms, no aphorisms at all.
+
 ## Captions are part of the deliverable
 
 Under each phone write 2–3 `<p class="caption">` lines. Each starts with a bold
